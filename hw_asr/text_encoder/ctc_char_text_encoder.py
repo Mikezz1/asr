@@ -1,4 +1,6 @@
-from typing import List, NamedTuple
+from base64 import decode
+from typing import Dict, List, NamedTuple
+from collections import defaultdict
 
 import torch
 
@@ -20,8 +22,14 @@ class CTCCharTextEncoder(CharTextEncoder):
         self.char2ind = {v: k for k, v in self.ind2char.items()}
 
     def ctc_decode(self, inds: List[int]) -> str:
-        # TODO: your code here
-        raise NotImplementedError()
+        last_char = inds[0]
+        decoded_output = [self.ind2char[last_char]]
+        for ind in inds[1:]:
+            if (ind == last_char) or (ind == 0):
+                continue
+            decoded_output.append(self.ind2char[ind])
+            last_char = ind
+        return ''.join(decoded_output)
 
     def ctc_beam_search(self, probs: torch.tensor, probs_length,
                         beam_size: int = 100) -> List[Hypothesis]:
@@ -32,6 +40,30 @@ class CTCCharTextEncoder(CharTextEncoder):
         char_length, voc_size = probs.shape
         assert voc_size == len(self.ind2char)
         hypos: List[Hypothesis] = []
-        # TODO: your code here
-        raise NotImplementedError
-        return sorted(hypos, key=lambda x: x.prob, reverse=True)
+
+        paths = {
+            ('', self.EMPTY_TOK): 1.0
+        }
+
+        for proba in probs:
+            paths = self._extend_and_merge(paths, proba)
+            paths = self._cut_beams(paths, beam_size)
+
+        return sorted([Hypothesis((res+last_char).strip().replace(self.EMPTY_TOK, ''), proba)
+                       for (res, last_char), proba in paths.items()], key=lambda x: x.prob, reverse=True)
+
+    def _extend_and_merge(self, paths: dict, proba):
+        new_paths = defaultdict(float)
+        for (res, last_char), v in paths.items():
+            for i in range(len(proba)):
+                if self.ind2char[i] == last_char:
+                    new_paths[res + self.ind2char[i]] = v * proba[i]
+                else:
+                    new_paths[((res+last_char).replace(self.EMPTY_TOK, ''),
+                               self.ind2char[i])] += v*proba[i]
+            return new_paths
+
+    def _cut_beams(self, paths: dict, beam_size: int):
+        return dict(
+            list(sorted(paths.items(),
+                        key=lambda x: x[1]))[-beam_size:])

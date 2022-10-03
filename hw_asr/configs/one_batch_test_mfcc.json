@@ -5,8 +5,8 @@
     "sr": 16000,
     "spectrogram": {
       "type": "MFCC",
-      "args": {
-      }
+      "args": {},
+      "log_spec": true
     }
   },
   "augmentations": {

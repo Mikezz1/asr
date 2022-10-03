@@ -5,9 +5,9 @@
     "sr": 16000,
     "spectrogram": {
       "type": "MelSpectrogram",
-      "args": {
-      }
-    }
+      "args": {}
+    },
+    "log_spec": true
   },
   "augmentations": {
     "wave": [],
