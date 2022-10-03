@@ -5,9 +5,9 @@
     "sr": 16000,
     "spectrogram": {
       "type": "MFCC",
-      "args": {},
-      "log_spec": true
-    }
+      "args": {}
+    },
+    "log_spec": true
   },
   "augmentations": {
     "wave": [],
@@ -29,22 +29,6 @@
           "type": "LibrispeechDataset",
           "args": {
             "part": "train-clean-100",
-            "max_audio_length": 20.0,
-            "max_text_length": 200
-          }
-        },
-        {
-          "type": "LibrispeechDataset",
-          "args": {
-            "part": "train-clean-360",
-            "max_audio_length": 20.0,
-            "max_text_length": 200
-          }
-        },
-        {
-          "type": "LibrispeechDataset",
-          "args": {
-            "part": "train-other-500",
             "max_audio_length": 20.0,
             "max_text_length": 200
           }
