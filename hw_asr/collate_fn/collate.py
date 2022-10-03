@@ -25,6 +25,10 @@ def collate_fn(dataset_items: List[dict]):
     # Custom dataset may not return text_encoded_length
     text_encoded_length = torch.Tensor([item['text_encoded'].size()[1]
                                         for item in dataset_items])
+
+    spectrogram_length = torch.Tensor([item['spectrogram'].size()[1]
+                                       for item in dataset_items])
+
     text = [item['text'] for item in dataset_items]
     audio = [item['audio'] for item in dataset_items]
 
@@ -33,6 +37,7 @@ def collate_fn(dataset_items: List[dict]):
         'spectrogram': spectrogram,
         'text': text,
         'text_encoded': text_encoded,
-        'text_encoded_length': text_encoded_length
+        'text_encoded_length': text_encoded_length,
+        'spectrogram_length': spectrogram_length
     }
     return result_batch
