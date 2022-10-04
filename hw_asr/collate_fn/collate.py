@@ -13,24 +13,25 @@ def collate_fn(dataset_items: List[dict]):
 
     # Should return (batch_size, n_mels, t)
     spectrogram = pad_sequence([item['spectrogram'].squeeze().permute(1, 0)
-                               for item in dataset_items], batch_first=True)
-    spectrogram = spectrogram.permute(0, 2, 1)
+                               for item in dataset_items], padding_value=0)
+    spectrogram = spectrogram.permute(1, 2, 0)
 
     # Should return (batch_size, text_encoded_length)
     text_encoded = pad_sequence([item['text_encoded'].permute(1, 0)
-                                for item in dataset_items], batch_first=True)
+                                for item in dataset_items], padding_value=0)
 
-    text_encoded = text_encoded.squeeze().permute(0, 1)
+    text_encoded = text_encoded.permute(1, 0, 2).squeeze()
 
-    # Custom dataset may not return text_encoded_length
-    text_encoded_length = torch.Tensor([item['text_encoded'].size()[1]
-                                        for item in dataset_items])
+    # lengths for masking during evalu
+    text_encoded_length = torch.LongTensor([item['text_encoded'].size()[1]
+                                            for item in dataset_items])
 
-    spectrogram_length = torch.Tensor([item['spectrogram'].size()[1]
-                                       for item in dataset_items])
+    spectrogram_length = torch.LongTensor([item['spectrogram'].size()[1]
+                                           for item in dataset_items])
 
     text = [item['text'] for item in dataset_items]
     audio = [item['audio'] for item in dataset_items]
+    audio_path = [item['audio_path'] for item in dataset_items]
 
     result_batch = {
         'audio': audio,
@@ -38,6 +39,7 @@ def collate_fn(dataset_items: List[dict]):
         'text': text,
         'text_encoded': text_encoded,
         'text_encoded_length': text_encoded_length,
-        'spectrogram_length': spectrogram_length
+        'spectrogram_length': spectrogram_length,
+        'audio_path': audio_path
     }
     return result_batch

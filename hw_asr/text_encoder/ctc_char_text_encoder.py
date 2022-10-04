@@ -36,21 +36,22 @@ class CTCCharTextEncoder(CharTextEncoder):
         """
         Performs beam search and returns a list of pairs (hypothesis, hypothesis probability).
         """
-        assert len(probs.shape) == 2
-        char_length, voc_size = probs.shape
-        assert voc_size == len(self.ind2char)
-        hypos: List[Hypothesis] = []
+        # assert len(probs.shape) == 2
+        # char_length, voc_size = probs.shape
+        # assert voc_size == len(self.ind2char)
+        # hypos: List[Hypothesis] = []
 
-        paths = {
-            ('', self.EMPTY_TOK): 1.0
-        }
+        # paths = {
+        #     ('', self.EMPTY_TOK): 1.0
+        # }
 
-        for proba in probs:
-            paths = self._extend_and_merge(paths, proba)
-            paths = self._cut_beams(paths, beam_size)
+        # for proba in probs:
+        #     paths = self._extend_and_merge(paths, proba)
+        #     paths = self._cut_beams(paths, beam_size)
 
-        return sorted([Hypothesis((res+last_char).strip().replace(self.EMPTY_TOK, ''), proba)
-                       for (res, last_char), proba in paths.items()], key=lambda x: x.prob, reverse=True)
+        # return sorted([Hypothesis((res+last_char).strip().replace(self.EMPTY_TOK, ''), proba)
+        #                for (res, last_char), proba in paths.items()], key=lambda x: x.prob, reverse=True)
+        raise NotImplementedError
 
     def _extend_and_merge(self, paths: dict, proba):
         new_paths = defaultdict(float)

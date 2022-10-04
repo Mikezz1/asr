@@ -30,7 +30,8 @@ class CharTextEncoder(BaseTextEncoder):
         try:
             return Tensor([self.char2ind[char] for char in text]).unsqueeze(0)
         except KeyError as e:
-            unknown_chars = set([char for char in text if char not in self.char2ind])
+            unknown_chars = set(
+                [char for char in text if char not in self.char2ind])
             raise Exception(
                 f"Can't encode text '{text}'. Unknown chars: '{' '.join(unknown_chars)}'")
 
