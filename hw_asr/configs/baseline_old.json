@@ -14,17 +14,15 @@
     "spectrogram": []
   },
   "arch": {
-    "type": "DeepSpeech",
+    "type": "BaselineModel",
     "args": {
       "n_feats": 128,
-      "gru_hidden": 256,
-      "n_gru": 5,
-      "conv_channels": 32
+      "fc_hidden": 64
     }
   },
   "data": {
     "train": {
-      "batch_size": 6,
+      "batch_size": 5,
       "num_workers": 2,
       "datasets": [
         {
@@ -33,13 +31,13 @@
             "part": "train",
             "max_audio_length": 20.0,
             "max_text_length": 200,
-            "limit": 12
+            "limit": 10
           }
         }
       ]
     },
     "val": {
-      "batch_size": 6,
+      "batch_size": 5,
       "num_workers": 2,
       "datasets": [
         {
