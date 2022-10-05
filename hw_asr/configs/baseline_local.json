@@ -16,7 +16,7 @@
   "arch": {
     "type": "DeepSpeech",
     "args": {
-      "n_feats": 128,
+      "n_feats": 32,
       "gru_hidden": 256,
       "n_gru": 5,
       "conv_channels": 32
@@ -24,16 +24,16 @@
   },
   "data": {
     "train": {
-      "batch_size": 6,
+      "batch_size": 5,
       "num_workers": 2,
       "datasets": [
         {
           "type": "LJspeechDataset",
           "args": {
-            "part": "train",
+            "part": "test",
             "max_audio_length": 20.0,
             "max_text_length": 200,
-            "limit": 12
+            "limit": 5
           }
         }
       ]
@@ -126,7 +126,7 @@
     "early_stop": 100,
     "visualize": "wandb",
     "wandb_project": "asr_project",
-    "len_epoch": 10,
-    "grad_norm_clip": 1
+    "len_epoch": 5,
+    "grad_norm_clip": 5
   }
 }

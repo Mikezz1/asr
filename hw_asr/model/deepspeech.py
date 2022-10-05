@@ -11,34 +11,32 @@ class DeepSpeech(BaseModel):
             self, n_feats, gru_hidden, n_gru, conv_channels, n_class=28, *args,
             **kwargs):
         super().__init__(n_feats, n_class=n_class, *args, **kwargs)
+        self.relu = nn.ReLU()
         self.conv_block1 = conv_block(in_channels=1,
                                       out_channels=conv_channels,
-                                      kernel_size=(5, 1),
-                                      stride=(1, 1),
-                                      padding=(2, 0)
-                                      )
-
-        self.conv_block2 = conv_block(in_channels=1,
-                                      out_channels=conv_channels,
-                                      kernel_size=(5, 1),
-                                      stride=(1, 1),
-                                      padding=(2, 0)
-                                      )
-        self.conv_block3 = conv_block(in_channels=1,
-                                      out_channels=conv_channels,
-                                      kernel_size=(5, 1),
+                                      kernel_size=(41, 11),
                                       stride=(2, 1),
-                                      padding=(2, 0)
+                                      padding=(20, 5)
                                       )
 
-        self.gru_block = gru_block(input_size=8192,
+        self.conv_block2 = conv_block(in_channels=conv_channels,
+                                      out_channels=conv_channels,
+                                      kernel_size=(21, 11),
+                                      stride=(2, 1),
+                                      padding=(10, 5),
+                                      )
+
+        self.gru_block = gru_block(input_size=1024,  # 8192,
                                    hidden_size=gru_hidden,
                                    num_layers=n_gru,
                                    bidirectional=True
                                    )
 
-        self.fc = nn.Linear(in_features=gru_hidden,
-                            out_features=n_class)
+        self.fc1 = nn.Linear(in_features=gru_hidden,
+                             out_features=256)
+
+        self.fc2 = nn.Linear(in_features=256,
+                             out_features=n_class)
 
     def forward(self, spectrogram, *args, **kwargs):
         # out =
@@ -46,13 +44,11 @@ class DeepSpeech(BaseModel):
         # print(spectrogram.size())
         out = self.conv_block1(spectrogram)
         # print(out.size())
-        out = self.conv_block2(spectrogram)
+        out = self.conv_block2(out)
         # print(out.size())
-        out = self.conv_block3(spectrogram)
         # out.size() = (seq_len, bs, 2*hidden_size)
         # h.size() = (2*num_layers, bs, hidden_size)
-        # print(out.size())
-        out = out.view(out.size()[0],  out.size()[-1], -1,)
+        out = out.view(out.size()[0],  out.size()[-1], -1)
         # print(out.size())
         # print(out.size())
         out, h = self.gru_block(out)
@@ -60,7 +56,9 @@ class DeepSpeech(BaseModel):
         # print(out.size())
         # print(h.size())
         # print(out.size())
-        out = self.fc(out)
+        out = self.fc1(out)
+        out = self.fc2(self.relu(out))
+        # print(out.size())
         # print(out.size())
         # print(out.size())
         return {"logits": out}

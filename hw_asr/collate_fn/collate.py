@@ -26,8 +26,9 @@ def collate_fn(dataset_items: List[dict]):
     text_encoded_length = torch.LongTensor([item['text_encoded'].size()[1]
                                             for item in dataset_items])
 
-    spectrogram_length = torch.LongTensor([item['spectrogram'].size()[1]
-                                           for item in dataset_items])
+    spectrogram_length = torch.LongTensor(
+        [item['spectrogram'].size()[2]
+         for item in dataset_items])
 
     text = [item['text'] for item in dataset_items]
     audio = [item['audio'] for item in dataset_items]
