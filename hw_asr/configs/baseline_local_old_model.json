@@ -16,16 +16,17 @@
   "arch": {
     "type": "DeepSpeech",
     "args": {
-      "n_feats": 128,
-      "gru_hidden": 256,
-      "n_gru": 5,
-      "conv_channels": 128
+      "type": "BaselineModel",
+      "args": {
+        "n_feats": 128,
+        "fc_hidden": 64
+      }
     }
   },
   "data": {
     "train": {
-      "batch_size": 200,
-      "num_workers": 6,
+      "batch_size": 4,
+      "num_workers": 4,
       "datasets": [
         {
           "type": "LJspeechDataset",
@@ -33,53 +34,11 @@
             "part": "train",
             "max_audio_length": 20.0,
             "max_text_length": 200,
-            "limit": 50
-          }
-        }
-      ]
-    },
-    "val": {
-      "batch_size": 2000,
-      "num_workers": 6,
-      "datasets": [
-        {
-          "type": "LibrispeechDataset",
-          "args": {
-            "part": "dev-clean",
-            "max_audio_length": 20.0,
-            "max_text_length": 200
+            "limit": 4
           }
         }
       ]
     }
-    // "test-other": {
-    //   "batch_size": 200,
-    //   "num_workers": 6,
-    //   "datasets": [
-    //     {
-    //       "type": "LibrispeechDataset",
-    //       "args": {
-    //         "part": "test-other",
-    //         "max_audio_length": 20.0,
-    //         "max_text_length": 200
-    //       }
-    //     }
-    //   ]
-    // },
-    // "test-clean": {
-    //   "batch_size": 200,
-    //   "num_workers": 6,
-    //   "datasets": [
-    //     {
-    //       "type": "LibrispeechDataset",
-    //       "args": {
-    //         "part": "test-clean",
-    //         "max_audio_length": 20.0,
-    //         "max_text_length": 200
-    //       }
-    //     }
-    //   ]
-    // }
   },
   "optimizer": {
     "type": "Adam",
@@ -110,15 +69,15 @@
   "lr_scheduler": {
     "type": "OneCycleLR",
     "args": {
-      "steps_per_epoch": 10,
-      "epochs": 20,
+      "steps_per_epoch": 4,
+      "epochs": 25,
       "anneal_strategy": "cos",
       "max_lr": 4e-3,
       "pct_start": 0.2
     }
   },
   "trainer": {
-    "epochs": 20,
+    "epochs": 25,
     "save_dir": "saved/",
     "save_period": 5,
     "verbosity": 2,
@@ -126,7 +85,7 @@
     "early_stop": 100,
     "visualize": "wandb",
     "wandb_project": "asr_project",
-    "len_epoch": 50,
-    "grad_norm_clip": 1
+    "len_epoch": 4,
+    "grad_norm_clip": 5
   }
 }
