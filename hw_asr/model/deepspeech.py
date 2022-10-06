@@ -27,13 +27,13 @@ class DeepSpeech(BaseModel):
                                       )
 
         self.conv_block3 = conv_block(in_channels=conv_channels,
-                                      out_channels=1536,
+                                      out_channels=conv_channels*3,
                                       kernel_size=(21, 11),
                                       stride=(2, 1),
                                       padding=(10, 5),
                                       )
 
-        self.gru_block = gru_block(input_size=1536,  # 8192,
+        self.gru_block = gru_block(input_size=1024,  # 8192,
                                    hidden_size=gru_hidden,
                                    num_layers=n_gru,
                                    bidirectional=True
@@ -53,7 +53,7 @@ class DeepSpeech(BaseModel):
         # print(out.size())
         out = self.conv_block2(out)
 
-        out = self.conv_block3(out)
+        # out = self.conv_block3(out)
         # print(out.size())
         # out.size() = (seq_len, bs, 2*hidden_size)
         # h.size() = (2*num_layers, bs, hidden_size)
