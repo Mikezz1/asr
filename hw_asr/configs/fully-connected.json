@@ -14,12 +14,10 @@
     "spectrogram": []
   },
   "arch": {
-    "type": "DeepSpeech",
+    "type": "BaselineModel",
     "args": {
-      "n_feats": 32,
-      "gru_hidden": 512,
-      "n_gru": 1,
-      "conv_channels": 32
+      "n_feats": 128,
+      "fc_hidden": 64
     }
   },
   "data": {
