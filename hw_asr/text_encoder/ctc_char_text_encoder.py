@@ -22,9 +22,9 @@ class CTCCharTextEncoder(CharTextEncoder):
         self.char2ind = {v: k for k, v in self.ind2char.items()}
 
     def ctc_decode(self, inds: List[int]) -> str:
-        last_char = inds[0]
-        decoded_output = [self.ind2char[last_char]]
-        for ind in inds[1:]:
+        last_char = self.EMPTY_TOK
+        decoded_output = []
+        for ind in inds:
             if (ind == last_char) or (ind == 0):
                 continue
             decoded_output.append(self.ind2char[ind])

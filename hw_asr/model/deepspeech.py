@@ -8,10 +8,11 @@ from hw_asr.base import BaseModel
 
 class DeepSpeech(BaseModel):
     def __init__(
-            self, n_feats, gru_hidden, n_gru, conv_channels, n_class=28, *args,
+            self,  gru_hidden, n_gru, conv_channels, n_class=28, *args,
             **kwargs):
-        super().__init__(n_feats, n_class=n_class, *args, **kwargs)
-        self.relu = nn.ReLU()
+        super().__init__(n_class=n_class, *args, **kwargs)
+        self.activation = nn.Hardtanh()
+
         self.conv_block1 = conv_block(in_channels=1,
                                       out_channels=conv_channels,
                                       kernel_size=(41, 11),
@@ -40,9 +41,6 @@ class DeepSpeech(BaseModel):
                                    )
 
         self.fc1 = nn.Linear(in_features=gru_hidden,
-                             out_features=256)
-
-        self.fc2 = nn.Linear(in_features=256,
                              out_features=n_class)
 
     def forward(self, spectrogram, *args, **kwargs):
@@ -66,7 +64,6 @@ class DeepSpeech(BaseModel):
         # print(h.size())
         # print(out.size())
         out = self.fc1(out)
-        out = self.fc2(self.relu(out))
         # print(out.size())
         # print(out.size())
         # print(out.size())
@@ -80,7 +77,7 @@ def conv_block(in_channels, out_channels, kernel_size, stride, padding):
     return nn.Sequential(
         nn.Conv2d(in_channels, out_channels, kernel_size, stride, padding),
         nn.BatchNorm2d(out_channels),
-        nn.ReLU()
+        nn.Hardtanh()
     )
 
 
