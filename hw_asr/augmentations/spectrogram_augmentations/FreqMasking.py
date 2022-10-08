@@ -4,7 +4,7 @@ from torch import Tensor
 from hw_asr.augmentations.base import AugmentationBase
 
 
-class TimeStratch(AugmentationBase):
+class FrequencyMasking(AugmentationBase):
     def __init__(self, *args, **kwargs):
         self._aug = FrequencyMasking(*args, **kwargs)
 

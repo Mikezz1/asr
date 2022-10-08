@@ -212,7 +212,6 @@ class Trainer(BaseTrainer):
             *args,
             **kwargs,
     ):
-        # TODO: implement logging of beam search results
         if self.writer is None:
             return
         argmax_inds = log_probs.cpu().argmax(-1).numpy()
@@ -242,16 +241,19 @@ class Trainer(BaseTrainer):
         self.writer.add_table("predictions", pd.DataFrame.from_dict(
             rows, orient="index"))
 
+        # #TODO: implement logging of beam search results
+        # bs_texts_raw =
+        # bs_texts =
+
     def _log_spectrogram(self, spectrogram_batch):
         spectrogram = random.choice(spectrogram_batch.cpu())
         image = PIL.Image.open(plot_spectrogram_to_buf(spectrogram))
         self.writer.add_image("spectrogram", ToTensor()(image))
 
     def _log_audio(self, spectrogram_audio):
-        audio = random.choice(spectrogram_audio.cpu())
-        self.writer.add_audio(
-            self, "sample audio", audio, sample_rate=self.config
-            ["preprocessing"]["sr"])
+        audio = random.choice(spectrogram_audio).cpu()
+        self.writer.add_audio(scalar_name="sample audio", audio=audio,
+                              sample_rate=self.config["preprocessing"]["sr"])
 
     @torch.no_grad()
     def get_grad_norm(self, norm_type=2):

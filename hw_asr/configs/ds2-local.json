@@ -1,5 +1,5 @@
 {
-  "name": "ds2-demo",
+  "name": "baseline",
   "n_gpu": 1,
   "preprocessing": {
     "sr": 16000,
@@ -25,35 +25,15 @@
   },
   "data": {
     "train": {
-      "batch_size": 120,
-      "num_workers": 10,
+      "batch_size": 4,
+      "num_workers": 2,
       "datasets": [
         {
-          "type": "LibrispeechDataset",
+          "type": "LJspeechDataset",
           "args": {
-            "part": "train-clean-100",
+            "part": "train",
             "max_audio_length": 16.7,
-            "max_text_length": 225
-          }
-        },
-        {
-          "type": "LibrispeechDataset",
-          "args": {
-            "part": "train-clean-360",
-            "max_audio_length": 16.7,
-            "max_text_length": 225
-          }
-        }
-      ]
-    },
-    "val": {
-      "batch_size": 70,
-      "num_workers": 10,
-      "datasets": [
-        {
-          "type": "LibrispeechDataset",
-          "args": {
-            "part": "dev-clean"
+            "max_text_length": 100
           }
         }
       ]
@@ -90,25 +70,25 @@
   "lr_scheduler": {
     "type": "OneCycleLR",
     "args": {
-      "steps_per_epoch": 50,
-      "epochs": 100,
+      "steps_per_epoch": 10,
+      "epochs": 10,
       "anneal_strategy": "cos",
       "max_lr": 5e-3,
-      "pct_start": 0.2,
+      "pct_start": 0.3,
       "div_factor": 2,
       "final_div_factor": 10
     }
   },
   "trainer": {
-    "epochs": 100,
+    "epochs": 10,
     "save_dir": "saved/",
     "save_period": 10,
     "verbosity": 2,
     "monitor": "min val_loss",
-    "early_stop": 30000,
     "visualize": "wandb",
+    "early_stop": 30000,
     "wandb_project": "asr_project",
     "grad_norm_clip": 10,
-    "len_epoch": 50
+    "len_epoch": 10
   }
 }
