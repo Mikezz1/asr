@@ -24,16 +24,27 @@
   },
   "data": {
     "train": {
-      "batch_size": 32,
-      "num_workers": 8,
+      "batch_size": 120,
+      "num_workers": 10,
       "datasets": [
         {
-          "type": "LJspeechDataset",
+          "type": "LibrispeechDataset",
           "args": {
-            "part": "train",
+            "part": "train-clean-100",
             "max_audio_length": 16.7,
-            "max_text_length": 250,
-            "limit": 32
+            "max_text_length": 200
+          }
+        }
+      ]
+    },
+    "val": {
+      "batch_size": 120,
+      "num_workers": 10,
+      "datasets": [
+        {
+          "type": "LibrispeechDataset",
+          "args": {
+            "part": "dev-clean"
           }
         }
       ]
@@ -43,7 +54,6 @@
     "type": "SGD",
     "args": {
       "lr": 0.001,
-      "power": 0.5,
       "momentum": 0.9,
       "weight_decay": 0.0005
     }
@@ -71,25 +81,25 @@
   "lr_scheduler": {
     "type": "OneCycleLR",
     "args": {
-      "steps_per_epoch": 10,
+      "steps_per_epoch": 80,
       "epochs": 100,
       "anneal_strategy": "cos",
-      "max_lr": 9e-3,
-      "pct_start": 0.2,
-      "div_factor": 4,
-      "final_div_factor": 50
+      "max_lr": 5e-3,
+      "pct_start": 0.3,
+      "div_factor": 2,
+      "final_div_factor": 10
     }
   },
   "trainer": {
     "epochs": 100,
     "save_dir": "saved/",
-    "save_period": 15,
+    "save_period": 10,
     "verbosity": 2,
     "monitor": "min val_loss",
     "early_stop": 30000,
     "visualize": "wandb",
     "wandb_project": "asr_project",
-    "grad_norm_clip": 5,
-    "len_epoch": 10
+    "grad_norm_clip": 10,
+    "len_epoch": 80
   }
 }
