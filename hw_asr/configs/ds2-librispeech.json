@@ -17,7 +17,7 @@
     "type": "DeepSpeech",
     "args": {
       "n_feats": 32,
-      "gru_hidden": 800,
+      "gru_hidden": 2560,
       "n_gru": 1,
       "conv_channels": 32,
       "dropout": 0.2

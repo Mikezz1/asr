@@ -18,7 +18,7 @@
     "args": {
       "n_feats": 32,
       "gru_hidden": 512,
-      "n_gru": 2,
+      "n_gru": 1,
       "conv_channels": 32,
       "dropout": 0.2
     }
@@ -64,6 +64,20 @@
       "type": "ArgmaxCERMetric",
       "args": {
         "name": "CER (argmax)"
+      }
+    },
+    {
+      "type": "CTCCERMetric",
+      "args": {
+        "name": "CER (CTC)",
+        "beam_size": 100
+      }
+    },
+    {
+      "type": "CTCWERMetric",
+      "args": {
+        "name": "WER (CTC)",
+        "beam_size": 100
       }
     }
   ],
