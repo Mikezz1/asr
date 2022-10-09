@@ -15,6 +15,8 @@ from hw_asr.base.base_text_encoder import BaseTextEncoder
 from hw_asr.logger.utils import plot_spectrogram_to_buf
 from hw_asr.metric.utils import calc_cer, calc_wer
 from hw_asr.utils import inf_loop, MetricTracker
+from hw_asr.metric.cer_metric import ArgmaxCERMetric
+from hw_asr.metric.wer_metric import ArgmaxWERMetric
 
 
 class Trainer(BaseTrainer):
@@ -214,6 +216,7 @@ class Trainer(BaseTrainer):
     ):
         if self.writer is None:
             return
+
         argmax_inds = log_probs.cpu().argmax(-1).numpy()
         argmax_inds = [
             inds[: int(ind_len)]

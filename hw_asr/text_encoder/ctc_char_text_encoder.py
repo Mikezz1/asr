@@ -3,6 +3,7 @@ from typing import Dict, List, NamedTuple
 from collections import defaultdict
 
 import torch
+import kenlm
 
 from .char_text_encoder import CharTextEncoder
 
@@ -45,7 +46,7 @@ class CTCCharTextEncoder(CharTextEncoder):
             ('', self.EMPTY_TOK): 1.0
         }
 
-        for proba in probs:
+        for proba in probs.detach().cpu():
             paths = self._extend_and_merge(paths, proba)
             paths = self._cut_beams(paths, beam_size)
 
@@ -57,7 +58,7 @@ class CTCCharTextEncoder(CharTextEncoder):
         for (res, last_char), v in paths.items():
             for i in range(len(proba)):
                 if self.ind2char[i] == last_char:
-                    new_paths[res + self.ind2char[i]] = v * proba[i]
+                    new_paths[res, last_char] = v * proba[i]
                 else:
                     new_paths[((res+last_char).replace(self.EMPTY_TOK, ''),
                                self.ind2char[i])] += v*proba[i]

@@ -20,34 +20,26 @@
       "gru_hidden": 800,
       "n_gru": 1,
       "conv_channels": 32,
-      "dropout": 0.2
+      "dropout": 0.1
     }
   },
   "data": {
     "train": {
-      "batch_size": 120,
+      "batch_size": 80,
       "num_workers": 10,
       "datasets": [
         {
           "type": "LibrispeechDataset",
           "args": {
             "part": "train-clean-100",
-            "max_audio_length": 16.7,
-            "max_text_length": 225
-          }
-        },
-        {
-          "type": "LibrispeechDataset",
-          "args": {
-            "part": "train-clean-360",
-            "max_audio_length": 16.7,
+            "max_audio_length": 6,
             "max_text_length": 225
           }
         }
       ]
     },
     "val": {
-      "batch_size": 70,
+      "batch_size": 60,
       "num_workers": 10,
       "datasets": [
         {
@@ -85,13 +77,27 @@
       "args": {
         "name": "CER (argmax)"
       }
+    },
+    {
+      "type": "CTCCERMetric",
+      "args": {
+        "name": "CER (CTC)",
+        "beam_size": 200
+      }
+    },
+    {
+      "type": "CTCWERMetric",
+      "args": {
+        "name": "WER (CTC)",
+        "beam_size": 200
+      }
     }
   ],
   "lr_scheduler": {
     "type": "OneCycleLR",
     "args": {
       "steps_per_epoch": 80,
-      "epochs": 100,
+      "epochs": 20,
       "anneal_strategy": "cos",
       "max_lr": 5e-3,
       "pct_start": 0.2,
@@ -100,7 +106,7 @@
     }
   },
   "trainer": {
-    "epochs": 100,
+    "epochs": 20,
     "save_dir": "saved/",
     "save_period": 10,
     "verbosity": 2,

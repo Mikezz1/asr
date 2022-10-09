@@ -17,8 +17,8 @@
     "type": "DeepSpeech",
     "args": {
       "n_feats": 32,
-      "gru_hidden": 512,
-      "n_gru": 2,
+      "gru_hidden": 400,
+      "n_gru": 1,
       "conv_channels": 32,
       "dropout": 0.2
     }
@@ -33,7 +33,8 @@
           "args": {
             "part": "train",
             "max_audio_length": 16.7,
-            "max_text_length": 100
+            "max_text_length": 100,
+            "limit": 5
           }
         }
       ]
@@ -42,7 +43,7 @@
   "optimizer": {
     "type": "SGD",
     "args": {
-      "lr": 0.001,
+      "lr": 0.002,
       "momentum": 0.9,
       "weight_decay": 0.0005
     }
@@ -65,22 +66,36 @@
       "args": {
         "name": "CER (argmax)"
       }
+    },
+    {
+      "type": "CTCCERMetric",
+      "args": {
+        "name": "CER (CTC)",
+        "beam_size": 300
+      }
+    },
+    {
+      "type": "CTCWERMetric",
+      "args": {
+        "name": "WER (CTC)",
+        "beam_size": 300
+      }
     }
   ],
   "lr_scheduler": {
     "type": "OneCycleLR",
     "args": {
-      "steps_per_epoch": 10,
-      "epochs": 10,
+      "steps_per_epoch": 5,
+      "epochs": 50,
       "anneal_strategy": "cos",
       "max_lr": 5e-3,
       "pct_start": 0.3,
       "div_factor": 2,
-      "final_div_factor": 10
+      "final_div_factor": 5
     }
   },
   "trainer": {
-    "epochs": 10,
+    "epochs": 50,
     "save_dir": "saved/",
     "save_period": 10,
     "verbosity": 2,
@@ -89,6 +104,6 @@
     "early_stop": 30000,
     "wandb_project": "asr_project",
     "grad_norm_clip": 10,
-    "len_epoch": 10
+    "len_epoch": 5
   }
 }
