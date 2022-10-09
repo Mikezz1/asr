@@ -11,7 +11,7 @@ class DeepSpeech(BaseModel):
             self,  gru_hidden, n_gru, conv_channels, dropout,  n_class=28, *args,
             **kwargs):
         super().__init__(n_class=n_class, *args, **kwargs)
-        self.activation = nn.Hardtanh()
+        self.activation = nn.Hardtanh(min_val=0, mac_val=20)
 
         self.spec_freq = 128
         self.conv_h1 = int((self.spec_freq + 2*20 - 1*(41-1)-1)/2 + 1)

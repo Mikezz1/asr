@@ -17,8 +17,8 @@
     "type": "DeepSpeech",
     "args": {
       "n_feats": 32,
-      "gru_hidden": 512,
-      "n_gru": 2,
+      "gru_hidden": 800,
+      "n_gru": 1,
       "conv_channels": 32,
       "dropout": 0.2
     }
@@ -90,13 +90,13 @@
   "lr_scheduler": {
     "type": "OneCycleLR",
     "args": {
-      "steps_per_epoch": 50,
+      "steps_per_epoch": 80,
       "epochs": 100,
       "anneal_strategy": "cos",
       "max_lr": 5e-3,
       "pct_start": 0.2,
-      "div_factor": 2,
-      "final_div_factor": 10
+      "div_factor": 5,
+      "final_div_factor": 50
     }
   },
   "trainer": {
@@ -109,6 +109,6 @@
     "visualize": "wandb",
     "wandb_project": "asr_project",
     "grad_norm_clip": 10,
-    "len_epoch": 50
+    "len_epoch": 80
   }
 }
