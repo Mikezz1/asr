@@ -22,7 +22,7 @@ class DeepSpeech(BaseModel):
                             out_channels=conv_channels,
                             kernel_size=(41, 11),
                             stride=(2, 1),
-                            dilation=(1, 2),
+                            dilation=(1, 1),
                             padding=(20, 10),
                             activation=self.activation,
                             ),
