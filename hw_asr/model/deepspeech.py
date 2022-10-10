@@ -1,4 +1,3 @@
-from turtle import forward
 from unicodedata import bidirectional
 from torch import nn
 from torch.nn import Sequential
