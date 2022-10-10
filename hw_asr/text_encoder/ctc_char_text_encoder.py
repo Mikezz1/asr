@@ -3,7 +3,6 @@ from typing import Dict, List, NamedTuple
 from collections import defaultdict
 
 import torch
-import kenlm
 
 from .char_text_encoder import CharTextEncoder
 
