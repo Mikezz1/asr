@@ -47,29 +47,19 @@ class DeepSpeech(BaseModel):
     def forward(self, spectrogram, spectrogram_length, *args, **kwargs):
 
         out = self.conv_block(spectrogram.unsqueeze(1))
-        # print(out.size())
-        # out = self.conv_block3(out)
-        # print(out.size())
-        bs, filters, freqs, seq_length = out.size()
-        out = out.permute(0, 3, 2, 1)
-        out = out.contiguous()\
-            .view(bs, seq_length, filters*freqs)
-        # print(out.size())
-        # print(out.size())
+        seq_length = out.size()[-1]
+        out = out.permute(0, 3, 2, 1).flatten(start_dim=2, end_dim=3)
+
         out = pack_padded_sequence(
             out, lengths=spectrogram_length, batch_first=True,
             enforce_sorted=False)
+
         out, _ = self.gru_block(out)
         out, _ = pad_packed_sequence(
             out, batch_first=True, total_length=seq_length)
-        # print(out.size())
-        # print(out.size())
-        # print(h.size())
-        # print(out.size())
+
         out = self.fc1(out)
-        # print(out.size())
-        # print(out.size())
-        # print(out.size())
+
         return {"logits": out}
 
     def transform_input_lengths(self, input_lengths):

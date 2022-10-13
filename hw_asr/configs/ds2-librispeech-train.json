@@ -17,16 +17,16 @@
     "type": "DeepSpeech",
     "args": {
       "n_feats": 32,
-      "gru_hidden": 1280,
+      "gru_hidden": 1500,
       "n_gru": 3,
       "conv_channels": 32,
-      "dropout": 0.2
+      "dropout": 0.1
     }
   },
   "data": {
     "train": {
       "batch_size": 70,
-      "num_workers": 10,
+      "num_workers": 8,
       "datasets": [
         {
           "type": "LibrispeechDataset",
@@ -40,6 +40,14 @@
           "type": "LibrispeechDataset",
           "args": {
             "part": "train-clean-360",
+            "max_audio_length": 16.7,
+            "max_text_length": 270
+          }
+        },
+        {
+          "type": "LibrispeechDataset",
+          "args": {
+            "part": "train-other-500",
             "max_audio_length": 16.7,
             "max_text_length": 270
           }
@@ -95,7 +103,8 @@
       "type": "ArgmaxCERMetric",
       "args": {
         "name": "CER (argmax)"
-      }}
+      }
+    }
   ],
   "lr_scheduler": {
     "type": "OneCycleLR",
@@ -110,7 +119,7 @@
     }
   },
   "trainer": {
-    "epochs": 150,
+    "epochs": 180,
     "save_dir": "saved/",
     "save_period": 5,
     "verbosity": 2,
@@ -119,6 +128,6 @@
     "visualize": "wandb",
     "wandb_project": "asr_project",
     "grad_norm_clip": 10,
-    "len_epoch": 80
+    "len_epoch": 120
   }
 }

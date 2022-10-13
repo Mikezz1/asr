@@ -10,8 +10,41 @@
     "log_spec": true
   },
   "augmentations": {
-    "wave": [],
-    "spectrogram": []
+    "wave": [
+      {
+        "type": "AddColoredNoise",
+        "args": {
+          "min_f_decay": 0,
+          "p": 0.5
+        }
+      },
+      {
+        "type": "Gain",
+        "args": {
+          "min_gain_in_db": -18,
+          "max_gain_in_db": 6,
+          "p": 0.5
+        }
+      },
+      {
+        "type": "PitchShift",
+        "args": {
+          "min_transpose_semitones": -4.0,
+          "max_transpose_semitones": 4.0,
+          "p": 1
+        }
+      }
+    ],
+    "spectrogram": [
+      {
+        "type": "TimeStretch",
+        "args": {
+          "min_s": 0.5,
+          "max_s": 1.5,
+          "p": 1
+        }
+      }
+    ]
   },
   "arch": {
     "type": "DeepSpeech",
@@ -20,19 +53,19 @@
       "gru_hidden": 1400,
       "n_gru": 3,
       "conv_channels": 32,
-      "dropout": 0.2
+      "dropout": 0.1
     }
   },
   "data": {
     "train": {
-      "batch_size": 32,
+      "batch_size": 8,
       "num_workers": 10,
       "datasets": [
         {
           "type": "LibrispeechDataset",
           "args": {
             "part": "dev-clean",
-            "limit": 32
+            "limit": 8
           }
         }
       ]
@@ -63,38 +96,22 @@
       "args": {
         "name": "CER (argmax)"
       }
-    },
-    {
-      "type": "CTCWERMetric",
-      "args": {
-        "name": "WER (ctc)",
-        "ctc_type": "torch",
-        "beam_size": 600
-      }
-    },
-    {
-      "type": "CTCCERMetric",
-      "args": {
-        "name": "CER (ctc)",
-        "ctc_type": "torch",
-        "beam_size": 600
-      }
     }
   ],
   "lr_scheduler": {
     "type": "OneCycleLR",
     "args": {
-      "steps_per_epoch": 60,
-      "epochs": 15,
+      "steps_per_epoch": 10,
+      "epochs": 35,
       "anneal_strategy": "cos",
       "max_lr": 4e-4,
       "pct_start": 0.2,
       "div_factor": 4,
-      "final_div_factor": 10
+      "final_div_factor": 7
     }
   },
   "trainer": {
-    "epochs": 15,
+    "epochs": 35,
     "save_dir": "saved/",
     "save_period": 5,
     "verbosity": 2,
@@ -103,6 +120,6 @@
     "visualize": "wandb",
     "wandb_project": "asr_project",
     "grad_norm_clip": 10,
-    "len_epoch": 60
+    "len_epoch": 10
   }
 }
