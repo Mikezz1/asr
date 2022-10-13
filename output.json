@@ -1,0 +1,12 @@
+[
+  {
+    "ground_trurh": "we did not it must have come to life some time during the night and dug its way out laughed tad",
+    "pred_text_argmax": "we di not it must have come to life some time during the night and dug its way out laughe tad",
+    "pred_text_beam_search": [
+      [
+        "we di not it must have come to life some time during the night and dug its way out laughe tad",
+        368.8228095769882
+      ]
+    ]
+  }
+]

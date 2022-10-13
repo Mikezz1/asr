@@ -1,5 +1,5 @@
 {
-  "name": "baseline",
+  "name": "ds2-demo",
   "n_gpu": 1,
   "preprocessing": {
     "sr": 16000,
@@ -17,50 +17,55 @@
     "type": "DeepSpeech",
     "args": {
       "n_feats": 32,
-      "gru_hidden": 512,
-      "n_gru": 1,
-      "conv_channels": 32
+      "gru_hidden": 1280,
+      "n_gru": 3,
+      "conv_channels": 32,
+      "dropout": 0.2
     }
   },
   "data": {
     "train": {
-      "batch_size": 80,
-      "num_workers": 4,
-      "datasets": [
-        {
-          "type": "LJspeechDataset",
-          "args": {
-            "part": "train",
-            "max_audio_length": 20.0,
-            "max_text_length": 250
-          }
-        }
-      ]
-    },
-    "test-clean": {
-      "batch_size": 80,
-      "num_workers": 4,
+      "batch_size": 70,
+      "num_workers": 10,
       "datasets": [
         {
           "type": "LibrispeechDataset",
           "args": {
-            "part": "test-clean",
-            "max_audio_length": 20.0,
-            "max_text_length": 200
+            "part": "train-clean-100",
+            "max_audio_length": 16.7,
+            "max_text_length": 270
+          }
+        },
+        {
+          "type": "LibrispeechDataset",
+          "args": {
+            "part": "train-clean-360",
+            "max_audio_length": 16.7,
+            "max_text_length": 270
           }
         }
       ]
     },
-    "lj-test": {
-      "batch_size": 80,
-      "num_workers": 4,
+    "val": {
+      "batch_size": 50,
+      "num_workers": 10,
       "datasets": [
         {
-          "type": "LJspeechDataset",
+          "type": "LibrispeechDataset",
           "args": {
-            "part": "train",
-            "max_audio_length": 20.0,
-            "max_text_length": 250
+            "part": "dev-clean"
+          }
+        }
+      ]
+    },
+    "test_clean": {
+      "batch_size": 50,
+      "num_workers": 10,
+      "datasets": [
+        {
+          "type": "LibrispeechDataset",
+          "args": {
+            "part": "test-clean"
           }
         }
       ]
@@ -69,7 +74,8 @@
   "optimizer": {
     "type": "Adam",
     "args": {
-      "lr": 3e-4
+      "lr": 2e-4,
+      "weight_decay": 0.0005
     }
   },
   "loss": {
@@ -89,28 +95,30 @@
       "type": "ArgmaxCERMetric",
       "args": {
         "name": "CER (argmax)"
-      }
-    }
+      }}
   ],
   "lr_scheduler": {
     "type": "OneCycleLR",
     "args": {
-      "steps_per_epoch": 110,
-      "epochs": 25,
+      "steps_per_epoch": 80,
+      "epochs": 150,
       "anneal_strategy": "cos",
-      "max_lr": 4e-3,
-      "pct_start": 0.4
+      "max_lr": 3e-4,
+      "pct_start": 0.15,
+      "div_factor": 5,
+      "final_div_factor": 8
     }
   },
   "trainer": {
-    "epochs": 50,
+    "epochs": 150,
     "save_dir": "saved/",
-    "save_period": 15,
+    "save_period": 5,
     "verbosity": 2,
     "monitor": "min val_loss",
     "early_stop": 30000,
     "visualize": "wandb",
     "wandb_project": "asr_project",
-    "grad_norm_clip": 5
+    "grad_norm_clip": 10,
+    "len_epoch": 80
   }
 }

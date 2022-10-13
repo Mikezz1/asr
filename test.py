@@ -11,6 +11,10 @@ from hw_asr.trainer import Trainer
 from hw_asr.utils import ROOT_PATH
 from hw_asr.utils.object_loading import get_dataloaders
 from hw_asr.utils.parse_config import ConfigParser
+# from torchaudio.models.decoder import ctc_decoder
+from string import ascii_lowercase
+import torchaudio
+from torchaudio.models.decoder import ctc_decoder
 
 DEFAULT_CHECKPOINT_PATH = ROOT_PATH / "default_test_model" / "checkpoint.pth"
 
@@ -28,7 +32,9 @@ def main(config, out_file):
     dataloaders = get_dataloaders(config, text_encoder)
 
     # build model architecture
-    model = config.init_obj(config["arch"], module_model, n_class=len(text_encoder))
+    model = config.init_obj(
+        config["arch"],
+        module_model, n_class=len(text_encoder))
     logger.info(model)
 
     logger.info("Loading checkpoint: {} ...".format(config.resume))
@@ -58,18 +64,21 @@ def main(config, out_file):
             )
             batch["probs"] = batch["log_probs"].exp().cpu()
             batch["argmax"] = batch["probs"].argmax(-1)
+
             for i in range(len(batch["text"])):
                 argmax = batch["argmax"][i]
                 argmax = argmax[: int(batch["log_probs_length"][i])]
+
                 results.append(
-                    {
-                        "ground_trurh": batch["text"][i],
-                        "pred_text_argmax": text_encoder.ctc_decode(argmax.cpu().numpy()),
-                        "pred_text_beam_search": text_encoder.ctc_beam_search(
-                            batch["probs"][i], batch["log_probs_length"][i], beam_size=100
-                        )[:10],
-                    }
-                )
+                    {"ground_trurh": batch["text"][i],
+                     "pred_text_argmax": text_encoder.ctc_decode(
+                         argmax.cpu().numpy()),
+                     "pred_text_beam_search": text_encoder.ctc_beam_search_pt(batch["probs"][i],
+                                                                              batch["log_probs_length"][i],
+                                                                              beam_size=100)[: 10]
+                     })
+
+    print(results)
     with Path(out_file).open("w") as f:
         json.dump(results, f, indent=2)
 

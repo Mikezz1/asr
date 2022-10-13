@@ -1,66 +1,55 @@
 {
-  "name": "one_batch_test",
+  "name": "ds2-demo",
   "n_gpu": 1,
   "preprocessing": {
     "sr": 16000,
     "spectrogram": {
       "type": "MelSpectrogram",
-      "args": {},
-      "log_spec": true
-    }
+      "args": {}
+    },
+    "log_spec": true
   },
   "augmentations": {
     "wave": [],
     "spectrogram": []
   },
   "arch": {
-    "type": "BaselineModel",
+    "type": "DeepSpeech",
     "args": {
-      "n_feats": 128,
-      "fc_hidden": 512
+      "n_feats": 32,
+      "gru_hidden": 1400,
+      "n_gru": 3,
+      "conv_channels": 32,
+      "dropout": 0.2
     }
   },
   "data": {
     "train": {
-      "batch_size": 10,
-      "num_workers": 0,
+      "batch_size": 32,
+      "num_workers": 10,
       "datasets": [
         {
           "type": "LibrispeechDataset",
           "args": {
             "part": "dev-clean",
-            "max_audio_length": 20.0,
-            "max_text_length": 200,
-            "limit": 10
-          }
-        }
-      ]
-    },
-    "val": {
-      "batch_size": 10,
-      "num_workers": 0,
-      "datasets": [
-        {
-          "type": "LibrispeechDataset",
-          "args": {
-            "part": "dev-clean",
-            "max_audio_length": 20.0,
-            "max_text_length": 200,
-            "limit": 10
+            "limit": 32
           }
         }
       ]
     }
   },
   "optimizer": {
-    "type": "SGD",
+    "type": "Adam",
     "args": {
-      "lr": 1e-2
+      "lr": 4e-4,
+      "weight_decay": 0.0005
     }
   },
   "loss": {
     "type": "CTCLoss",
-    "args": {}
+    "args": {
+      "zero_infinity": false
+    }
   },
   "metrics": [
     {
@@ -74,28 +63,46 @@
       "args": {
         "name": "CER (argmax)"
       }
+    },
+    {
+      "type": "CTCWERMetric",
+      "args": {
+        "name": "WER (ctc)",
+        "ctc_type": "torch",
+        "beam_size": 600
+      }
+    },
+    {
+      "type": "CTCCERMetric",
+      "args": {
+        "name": "CER (ctc)",
+        "ctc_type": "torch",
+        "beam_size": 600
+      }
     }
   ],
   "lr_scheduler": {
     "type": "OneCycleLR",
     "args": {
-      "steps_per_epoch": 100,
-      "epochs": 50,
+      "steps_per_epoch": 60,
+      "epochs": 15,
       "anneal_strategy": "cos",
-      "max_lr": 1e-2,
-      "pct_start": 0.2
+      "max_lr": 4e-4,
+      "pct_start": 0.2,
+      "div_factor": 4,
+      "final_div_factor": 10
     }
   },
   "trainer": {
-    "epochs": 50,
+    "epochs": 15,
     "save_dir": "saved/",
     "save_period": 5,
     "verbosity": 2,
     "monitor": "min val_loss",
-    "early_stop": 100,
+    "early_stop": 30000,
     "visualize": "wandb",
     "wandb_project": "asr_project",
-    "len_epoch": 100,
-    "grad_norm_clip": 10
+    "grad_norm_clip": 10,
+    "len_epoch": 60
   }
 }

@@ -1,10 +1,12 @@
-from base64 import decode
+# from base64 import decode
+# from msilib.schema import SelfReg
 from typing import Dict, List, NamedTuple
 from collections import defaultdict
 
 import torch
-
+import torchaudio
 from .char_text_encoder import CharTextEncoder
+from torchaudio.models.decoder import ctc_decoder
 
 
 class Hypothesis(NamedTuple):
@@ -17,8 +19,8 @@ class CTCCharTextEncoder(CharTextEncoder):
 
     def __init__(self, alphabet: List[str] = None):
         super().__init__(alphabet)
-        vocab = [self.EMPTY_TOK] + list(self.alphabet)
-        self.ind2char = dict(enumerate(vocab))
+        self.vocab = [self.EMPTY_TOK] + list(self.alphabet)
+        self.ind2char = dict(enumerate(self.vocab))
         self.char2ind = {v: k for k, v in self.ind2char.items()}
 
     def ctc_decode(self, inds: List[int]) -> str:
@@ -49,8 +51,21 @@ class CTCCharTextEncoder(CharTextEncoder):
             paths = self._extend_and_merge(paths, proba)
             paths = self._cut_beams(paths, beam_size)
 
-        return sorted([Hypothesis((res+last_char).strip().replace(self.EMPTY_TOK, ''), proba)
+        return sorted([Hypothesis((res+last_char).strip().replace(self.EMPTY_TOK, ''), float(proba))
                        for (res, last_char), proba in paths.items()], key=lambda x: x.prob, reverse=True)
+
+    def ctc_beam_search_pt(self, probs: torch.tensor, probs_length,
+                           beam_size: int = 100) -> List[Hypothesis]:
+
+        decoder = ctc_decoder(
+            tokens=self.vocab, beam_size=beam_size, lexicon=None,
+            blank_token="^", sil_token="^", nbest=20)
+        res = decoder(probs.unsqueeze(0))
+        return sorted([
+            Hypothesis(
+                self.ctc_decode(hypo.tokens.tolist()),
+                hypo.score) for hypo in res[0]],
+            key=lambda x: -x.prob)
 
     def _extend_and_merge(self, paths: dict, proba):
         new_paths = defaultdict(float)

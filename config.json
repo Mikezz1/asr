@@ -1,0 +1,91 @@
+{
+    "name": "ds2-demo",
+    "n_gpu": 1,
+    "preprocessing": {
+        "sr": 16000,
+        "spectrogram": {
+            "type": "MelSpectrogram",
+            "args": {}
+        },
+        "log_spec": true
+    },
+    "augmentations": {
+        "wave": [],
+        "spectrogram": []
+    },
+    "arch": {
+        "type": "DeepSpeech",
+        "args": {
+            "n_feats": 32,
+            "gru_hidden": 1280,
+            "n_gru": 3,
+            "conv_channels": 32,
+            "dropout": 0.2
+        }
+    },
+    "data": {
+        "test": {
+            "batch_size": 5,
+            "num_workers": 10,
+            "datasets": [
+                {
+                    "type": "LibrispeechDataset",
+                    "args": {
+                        "part": "test-clean"
+                    }
+                }
+            ]
+        }
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args": {
+            "lr": 0.0002,
+            "weight_decay": 0.0005
+        }
+    },
+    "loss": {
+        "type": "CTCLoss",
+        "args": {
+            "zero_infinity": false
+        }
+    },
+    "metrics": [
+        {
+            "type": "ArgmaxWERMetric",
+            "args": {
+                "name": "WER (argmax)"
+            }
+        },
+        {
+            "type": "ArgmaxCERMetric",
+            "args": {
+                "name": "CER (argmax)"
+            }
+        }
+    ],
+    "lr_scheduler": {
+        "type": "OneCycleLR",
+        "args": {
+            "steps_per_epoch": 80,
+            "epochs": 150,
+            "anneal_strategy": "cos",
+            "max_lr": 0.0003,
+            "pct_start": 0.15,
+            "div_factor": 5,
+            "final_div_factor": 8
+        }
+    },
+    "trainer": {
+        "epochs": 150,
+        "save_dir": "saved/",
+        "save_period": 5,
+        "verbosity": 2,
+        "monitor": "min val_loss",
+        "early_stop": 30000,
+        "visualize": "wandb",
+        "wandb_project": "asr_project",
+        "grad_norm_clip": 10,
+        "len_epoch": 80
+    }
+}

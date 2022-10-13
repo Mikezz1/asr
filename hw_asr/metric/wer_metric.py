@@ -45,7 +45,11 @@ class CTCWERMetric(BaseMetric):
         for log_prob, length, target_text in zip(
                 log_probs, log_probs_length, text):
             target_text = BaseTextEncoder.normalize_text(target_text)
-            pred_text = self.text_encoder.ctc_beam_search(
-                log_prob, length, beam_size=self.beam_size)[0].text
+            if self.ctc_type == 'torch':
+                pred_text = self.text_encoder.ctc_beam_search_pt(
+                    log_prob, length, beam_size=self.beam_size)[0].text
+            else:
+                pred_text = self.text_encoder.ctc_beam_search(
+                    log_prob, length, beam_size=self.beam_size)[0].text
             wers.append(calc_wer(target_text, pred_text))
         return sum(wers) / len(wers)

@@ -17,37 +17,37 @@
     "type": "DeepSpeech",
     "args": {
       "n_feats": 32,
-      "gru_hidden": 800,
-      "n_gru": 1,
+      "gru_hidden": 1280,
+      "n_gru": 3,
       "conv_channels": 32,
-      "dropout": 0.1
+      "dropout": 0.2
     }
   },
   "data": {
     "train": {
-      "batch_size": 120,
-      "num_workers": 10,
+      "batch_size": 100,
+      "num_workers": 8,
       "datasets": [
         {
           "type": "LibrispeechDataset",
           "args": {
             "part": "train-clean-100",
-            "max_audio_length": 6,
-            "max_text_length": 225
+            "max_audio_length": 7,
+            "max_text_length": 200
           }
         },
         {
           "type": "LibrispeechDataset",
           "args": {
             "part": "train-clean-360",
-            "max_audio_length": 6,
-            "max_text_length": 225
+            "max_audio_length": 7,
+            "max_text_length": 200
           }
         }
       ]
     },
     "val": {
-      "batch_size": 60,
+      "batch_size": 50,
       "num_workers": 10,
       "datasets": [
         {
@@ -57,13 +57,24 @@
           }
         }
       ]
+    },
+    "test_clean": {
+      "batch_size": 50,
+      "num_workers": 10,
+      "datasets": [
+        {
+          "type": "LibrispeechDataset",
+          "args": {
+            "part": "test-clean"
+          }
+        }
+      ]
     }
   },
   "optimizer": {
-    "type": "SGD",
+    "type": "Adam",
     "args": {
-      "lr": 0.001,
-      "momentum": 0.9,
+      "lr": 2e-4,
       "weight_decay": 0.0005
     }
   },
@@ -84,22 +95,7 @@
       "type": "ArgmaxCERMetric",
       "args": {
         "name": "CER (argmax)"
-      }
-    },
-    {
-      "type": "CTCCERMetric",
-      "args": {
-        "name": "CER (CTC)",
-        "beam_size": 200
-      }
-    },
-    {
-      "type": "CTCWERMetric",
-      "args": {
-        "name": "WER (CTC)",
-        "beam_size": 200
-      }
-    }
+      }}
   ],
   "lr_scheduler": {
     "type": "OneCycleLR",
@@ -107,10 +103,10 @@
       "steps_per_epoch": 80,
       "epochs": 30,
       "anneal_strategy": "cos",
-      "max_lr": 5e-3,
+      "max_lr": 3e-4,
       "pct_start": 0.2,
-      "div_factor": 5,
-      "final_div_factor": 50
+      "div_factor": 3,
+      "final_div_factor": 10
     }
   },
   "trainer": {
