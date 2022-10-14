@@ -100,13 +100,15 @@
     {
       "type": "CTCWERMetric",
       "args": {
-        "name": "WER (ctc)"
+        "name": "WER (ctc)",
+        "ctc_type": "custom"
       }
     },
     {
       "type": "CTCCERMetric",
       "args": {
-        "name": "CER (ctc)"
+        "name": "CER (ctc)",
+        "ctc_type": "custom"
       }
     }
   ],
