@@ -12,36 +12,36 @@
   "augmentations": {
     "wave": [
       {
-        "type": "AddColoredNoise",
+        "type": "AddColoredNoiseAug",
         "args": {
           "min_f_decay": 0,
-          "p": 0.5
+          "p": 0.15
         }
       },
       {
-        "type": "Gain",
+        "type": "GainAug",
         "args": {
           "min_gain_in_db": -18,
           "max_gain_in_db": 6,
-          "p": 0.5
+          "p": 0.15
         }
       },
       {
-        "type": "PitchShift",
+        "type": "PitchShiftAug",
         "args": {
-          "min_transpose_semitones": -4.0,
-          "max_transpose_semitones": 4.0,
-          "p": 1
+          "min_transpose_semitones": -3.0,
+          "max_transpose_semitones": 3.0,
+          "p": 0.1
         }
       }
     ],
     "spectrogram": [
       {
-        "type": "TimeStretch",
+        "type": "TimeStretchAug",
         "args": {
-          "min_s": 0.5,
-          "max_s": 1.5,
-          "p": 1
+          "min_s": 0.8,
+          "max_s": 1.2,
+          "p": 0.1
         }
       }
     ]

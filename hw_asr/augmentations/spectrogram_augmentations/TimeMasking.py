@@ -4,9 +4,10 @@ from torch import Tensor
 from hw_asr.augmentations.base import AugmentationBase
 
 
-class TimeMasking(AugmentationBase):
+class TimeMaskingAug(AugmentationBase):
     def __init__(self, *args, **kwargs):
-        self._aug = TimeMasking(*args, **kwargs)
+        self._aug = TimeMasking(
+            *args, **kwargs, sample_rate=AugmentationBase.sample_rate)
 
     def __call__(self, data: Tensor):
         x = data.unsqueeze(1)

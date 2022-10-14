@@ -51,7 +51,8 @@ class ConfigParser:
 
         # configure logging module
         setup_logging(self.log_dir)
-        self.log_levels = {0: logging.WARNING, 1: logging.INFO, 2: logging.DEBUG}
+        self.log_levels = {0: logging.WARNING,
+                           1: logging.INFO, 2: logging.DEBUG}
 
     @classmethod
     def from_args(cls, args, options=""):
@@ -82,8 +83,8 @@ class ConfigParser:
 
         # parse custom cli options into dictionary
         modification = {
-            opt.target: getattr(args, _get_opt_name(opt.flags)) for opt in options
-        }
+            opt.target: getattr(args, _get_opt_name(opt.flags))
+            for opt in options}
         return cls(config, resume, modification)
 
     @staticmethod
@@ -130,8 +131,7 @@ class ConfigParser:
 
     def get_logger(self, name, verbosity=2):
         msg_verbosity = "verbosity option {} is invalid. Valid options are {}.".format(
-            verbosity, self.log_levels.keys()
-        )
+            verbosity, self.log_levels.keys())
         assert verbosity in self.log_levels, msg_verbosity
         logger = logging.getLogger(name)
         logger.setLevel(self.log_levels[verbosity])
@@ -142,8 +142,9 @@ class ConfigParser:
             if "text_encoder" not in self._config:
                 self._text_encoder = CTCCharTextEncoder()
             else:
-                self._text_encoder = self.init_obj(self["text_encoder"],
-                                                   default_module=text_encoder_module)
+                self._text_encoder = self.init_obj(
+                    self["text_encoder"],
+                    default_module=text_encoder_module)
         return self._text_encoder
 
     # setting read-only attributes

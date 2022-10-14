@@ -1,9 +1,9 @@
-from hw_asr.augmentations.spectrogram_augmentations.FreqMasking import FrequencyMasking
-from hw_asr.augmentations.spectrogram_augmentations.TimeMasking import TimeMasking
-from hw_asr.augmentations.spectrogram_augmentations.FreqMasking import TimeStretch
+from hw_asr.augmentations.spectrogram_augmentations.FreqMasking import FrequencyMaskingAug
+from hw_asr.augmentations.spectrogram_augmentations.TimeMasking import TimeMaskingAug
+from hw_asr.augmentations.spectrogram_augmentations.TimeStretch import TimeStretchAug
 
 __all__ = [
-    "FrequencyMasking",
-    "TimeMasking",
-    "TimeStretch"
+    "FrequencyMaskingAug",
+    "TimeMaskingAug",
+    "TimeStretchAug"
 ]

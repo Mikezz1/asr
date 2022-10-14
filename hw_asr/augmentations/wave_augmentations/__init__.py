@@ -1,11 +1,11 @@
-from hw_asr.augmentations.wave_augmentations.Gain import Gain
-from hw_asr.augmentations.wave_augmentations.AddColoredNoise import AddColoredNoise
-from hw_asr.augmentations.wave_augmentations.BackgroundNoise import AddBackgroundNoise
-from hw_asr.augmentations.wave_augmentations.PitchShift import PitchShift
+from hw_asr.augmentations.wave_augmentations.Gain import GainAug
+from hw_asr.augmentations.wave_augmentations.AddColoredNoise import AddColoredNoiseAug
+from hw_asr.augmentations.wave_augmentations.BackgroundNoise import AddBackgroundNoiseAug
+from hw_asr.augmentations.wave_augmentations.PitchShift import PitchShiftAug
 
 __all__ = [
-    "Gain",
-    "AddColoredNoise",
-    "AddBackgroundNoise",
-    "PitchShift"
+    "GainAug",
+    "AddColoredNoiseAug",
+    "AddBackgroundNoiseAug",
+    "PitchShiftAug"
 ]

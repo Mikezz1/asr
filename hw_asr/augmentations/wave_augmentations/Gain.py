@@ -4,9 +4,10 @@ from torch import Tensor
 from hw_asr.augmentations.base import AugmentationBase
 
 
-class Gain(AugmentationBase):
+class GainAug(AugmentationBase):
     def __init__(self, *args, **kwargs):
-        self._aug = torch_audiomentations.Gain(*args, **kwargs)
+        self._aug = torch_audiomentations.Gain(
+            *args, **kwargs, sample_rate=AugmentationBase.sample_rate)
 
     def __call__(self, data: Tensor):
         x = data.unsqueeze(1)
