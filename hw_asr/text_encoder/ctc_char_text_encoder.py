@@ -67,16 +67,18 @@ class CTCCharTextEncoder(CharTextEncoder):
                 hypo.score) for hypo in res[0]],
             key=lambda x: -x.prob)
 
-    def _extend_and_merge(self, paths: dict, proba):
+    def _extend_and_merge(self, paths, proba):
         new_paths = defaultdict(float)
-        for (res, last_char), v in paths.items():
-            for i in range(len(proba)):
-                if self.ind2char[i] == last_char:
-                    new_paths[res, last_char] = v * proba[i]
-                else:
-                    new_paths[((res+last_char).replace(self.EMPTY_TOK, ''),
-                               self.ind2char[i])] += v*proba[i]
-            return new_paths
+        for next_char_index, next_char_prob in enumerate(proba):
+            next_char = self.ind2char[int(next_char_index)]
+
+            for (text, last_char), prob in paths.items():
+                new_prefix = text if next_char == last_char else(
+                    text + next_char)
+                new_prefix = new_prefix.replace(self.EMPTY_TOK, '')
+                new_paths[(new_prefix, next_char)] += prob * next_char_prob
+
+        return new_paths
 
     def _cut_beams(self, paths: dict, beam_size: int):
         return dict(

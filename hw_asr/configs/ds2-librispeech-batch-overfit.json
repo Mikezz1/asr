@@ -96,6 +96,18 @@
       "args": {
         "name": "CER (argmax)"
       }
+    },
+    {
+      "type": "CTCWERMetric",
+      "args": {
+        "name": "WER (ctc)"
+      }
+    },
+    {
+      "type": "CTCCERMetric",
+      "args": {
+        "name": "CER (ctc)"
+      }
     }
   ],
   "lr_scheduler": {
