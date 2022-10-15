@@ -52,7 +52,7 @@ class CTCCharTextEncoder(CharTextEncoder):
             paths = self._cut_beams(paths, beam_size)
 
         return sorted([Hypothesis((res+last_char).strip().replace(self.EMPTY_TOK, ''), float(proba))
-                       for (res, last_char), proba in paths.items()], key=lambda x: x.prob, reverse=True)
+                       for (res, last_char), proba in paths.items()], key=lambda x: -x.prob)
 
     def ctc_beam_search_pt(self, probs: torch.tensor, probs_length,
                            beam_size: int = 100) -> List[Hypothesis]:

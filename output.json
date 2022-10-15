@@ -4,8 +4,44 @@
     "pred_text_argmax": "we di not it must have come to life some time during the night and dug its way out laughe tad",
     "pred_text_beam_search": [
       [
-        "we di not it must have come to life some time during the night and dug its way out laughe tad",
-        368.8228095769882
+        "we di not it must have come to life some time during the night and dug its way out laughe tadd",
+        2.1915549236473097e-11
+      ],
+      [
+        "we did not it must have come to life some time during the night and dug its way out laughe tadd",
+        2.063823591191838e-11
+      ],
+      [
+        "we di not it must have come to life some time during the night and dug its way out laughed tadd",
+        1.909251229337272e-11
+      ],
+      [
+        "we did not it must have come to life some time during the night and dug its way out laughed tadd",
+        1.7977019178827547e-11
+      ],
+      [
+        "we didd not it must have come to life some time during the night and dug its way out laughe tadd",
+        7.21067086248417e-12
+      ],
+      [
+        "we dii not it must have come to life some time during the night and dug its way out laughe tadd",
+        6.866977472763658e-12
+      ],
+      [
+        "we didd not it must have come to life some time during the night and dug its way out laughed tadd",
+        6.1662472003454205e-12
+      ],
+      [
+        "we di not it must have come to life some time during the night and dug its way out laughedd tadd",
+        6.035452086022852e-12
+      ],
+      [
+        "we di not it must have come to life some time during the night and dug its way out llaughe tadd",
+        6.020132309325632e-12
+      ],
+      [
+        "we dii not it must have come to life some time during the night and dug its way out laughed tadd",
+        5.872336904938491e-12
       ]
     ]
   }

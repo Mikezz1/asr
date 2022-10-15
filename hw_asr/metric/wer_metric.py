@@ -35,7 +35,7 @@ class CTCWERMetric(BaseMetric):
     def __init__(self, text_encoder: BaseTextEncoder, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.text_encoder = text_encoder
-        self.beam_size
+        self.beam_size = 100
 
     def __call__(
             self, log_probs: Tensor, log_probs_length: Tensor, text: List

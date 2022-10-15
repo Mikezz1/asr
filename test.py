@@ -2,7 +2,7 @@ import argparse
 import json
 import os
 from pathlib import Path
-
+import numpy as np
 import torch
 from tqdm import tqdm
 
@@ -13,13 +13,14 @@ from hw_asr.utils.object_loading import get_dataloaders
 from hw_asr.utils.parse_config import ConfigParser
 # from torchaudio.models.decoder import ctc_decoder
 from string import ascii_lowercase
+from hw_asr.metric.utils import calc_cer, calc_wer
 import torchaudio
 from torchaudio.models.decoder import ctc_decoder
 
 DEFAULT_CHECKPOINT_PATH = ROOT_PATH / "default_test_model" / "checkpoint.pth"
 
 
-def main(config, out_file):
+def main(config, out_file, eval=False):
     logger = config.get_logger("test")
 
     # define cpu or gpu if possible
@@ -49,6 +50,7 @@ def main(config, out_file):
     model.eval()
 
     results = []
+    cers_argmax, wers_argmax, cers_bs, wers_bs = [], [], [], []
 
     with torch.no_grad():
         for batch_num, batch in enumerate(tqdm(dataloaders["test"])):
@@ -73,12 +75,37 @@ def main(config, out_file):
                     {"ground_trurh": batch["text"][i],
                      "pred_text_argmax": text_encoder.ctc_decode(
                          argmax.cpu().numpy()),
-                     "pred_text_beam_search": text_encoder.ctc_beam_search_pt(batch["probs"][i],
-                                                                              batch["log_probs_length"][i],
-                                                                              beam_size=100)[: 10]
-                     })
+                     "pred_text_beam_search": text_encoder.
+                     ctc_beam_search(
+                         batch["probs"][i],
+                         batch["log_probs_length"][i],
+                         beam_size=100)[: 10], })
 
-    print(results)
+            for sample in results:
+                cers_argmax.append(
+                    calc_cer(
+                        sample['ground_trurh'],
+                        sample['pred_text_argmax']))
+                cers_bs.append(
+                    calc_cer(
+                        sample['ground_trurh'],
+                        sample['pred_text_beam_search'][0].text))
+                wers_argmax.append(
+                    calc_wer(
+                        sample['ground_trurh'],
+                        sample['pred_text_argmax']))
+                wers_bs.append(
+                    calc_wer(
+                        sample['ground_trurh'],
+                        sample['pred_text_beam_search'][0].text))
+
+        if eval:
+            print('-' * 70)
+            print(
+                f"CER-argmax: {np.mean(cers_argmax)},  CER-beamsearch: {np.mean(cers_bs)}"
+                f"\nWER-argmax: {np.mean(wers_argmax)}, WER-beamsearch: {np.mean(wers_bs)}")
+            print('-' * 70)
+
     with Path(out_file).open("w") as f:
         json.dump(results, f, indent=2)
 
@@ -135,6 +162,14 @@ if __name__ == "__main__":
         help="Number of workers for test dataloader",
     )
 
+    args.add_argument(
+        "-e",
+        "--evaluate",
+        default=False,
+        type=bool,
+        help="Calc argmax/beamsearch metrics on test",
+    )
+
     args = args.parse_args()
 
     # set GPUs
@@ -178,4 +213,4 @@ if __name__ == "__main__":
     config["data"]["test"]["batch_size"] = args.batch_size
     config["data"]["test"]["n_jobs"] = args.jobs
 
-    main(config, args.output)
+    main(config, args.output, eval=args.evaluate)
