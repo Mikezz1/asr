@@ -7,6 +7,8 @@ import torch
 import torchaudio
 from .char_text_encoder import CharTextEncoder
 from torchaudio.models.decoder import ctc_decoder
+from torchaudio.models.decoder import download_pretrained_files
+from ctcdecode import CTCBeamDecoder
 
 
 class Hypothesis(NamedTuple):
@@ -22,6 +24,7 @@ class CTCCharTextEncoder(CharTextEncoder):
         self.vocab = [self.EMPTY_TOK] + list(self.alphabet)
         self.ind2char = dict(enumerate(self.vocab))
         self.char2ind = {v: k for k, v in self.ind2char.items()}
+        # self.files = download_pretrained_files("librispeech-4-gram")
 
     def ctc_decode(self, inds: List[int]) -> str:
         last_char = self.EMPTY_TOK
@@ -47,7 +50,7 @@ class CTCCharTextEncoder(CharTextEncoder):
             ('', self.EMPTY_TOK): 1.0
         }
 
-        for proba in probs.detach().cpu():
+        for proba in probs.numpy():
             paths = self._extend_and_merge(paths, proba)
             paths = self._cut_beams(paths, beam_size)
 
@@ -56,16 +59,55 @@ class CTCCharTextEncoder(CharTextEncoder):
 
     def ctc_beam_search_pt(self, probs: torch.tensor, probs_length,
                            beam_size: int = 100) -> List[Hypothesis]:
-
+        LM_WEIGHT = 3.23
+        WORD_SCORE = -0.26
+        # print(self.files.tokens)
         decoder = ctc_decoder(
-            tokens=self.vocab, beam_size=beam_size, lexicon=None,
-            blank_token="^", sil_token="^", nbest=20)
+            tokens=self.vocab,
+            beam_size=beam_size,
+            lexicon=None,
+            blank_token="^",
+            sil_token=" ",
+            nbest=20,
+        )
         res = decoder(probs.unsqueeze(0))
         return sorted([
             Hypothesis(
                 self.ctc_decode(hypo.tokens.tolist()),
                 hypo.score) for hypo in res[0]],
             key=lambda x: -x.prob)
+
+    def ctc_beam_search_fast(self, probs, probs_length, beam_size=100):
+
+        decoder = CTCBeamDecoder(
+            labels=self.vocab,
+            model_path=None,
+            alpha=0,
+            beta=0,
+            cutoff_top_n=100,
+            cutoff_prob=1.0,
+            beam_width=beam_size,
+            num_processes=8,
+            blank_id=0,
+            log_probs_input=False
+        )
+        beam_results, beam_scores, _, out_len = decoder.decode(
+            probs.unsqueeze(0))
+
+        beam_results = beam_results.squeeze(0)
+        beam_scores = beam_scores.squeeze(0)
+        out_len = out_len.squeeze(0)
+
+        beam_results_unpad = [
+            hypo[: out_len_i].tolist() for hypo,
+            out_len_i in zip(beam_results, out_len)]
+
+        beam_results_unpad = sorted(
+            [Hypothesis(self.ctc_decode(hypo),
+                        score) for hypo,
+             score in zip(beam_results_unpad, beam_scores)],
+            key=lambda x: -x.prob)
+        return beam_results_unpad
 
     def _extend_and_merge(self, paths, proba):
         new_paths = defaultdict(float)

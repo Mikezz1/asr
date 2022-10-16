@@ -1,47 +1,4601 @@
 [
   {
+    "ground_trurh": "it was plain that his castanet girl his mother and sister took a pleasure in crediting her daily with some fresh and unpleasing instrument could have had neither taste money nor honesty to such a point as this",
+    "pred_text_argmax": "we s t usu he ad",
+    "pred_text_beam_search": [
+      [
+        " we s t usu he ad ",
+        2176.4791136980057
+      ],
+      [
+        " we s t usu h ad ",
+        2176.454730629921
+      ],
+      [
+        " we s t uosu he ad ",
+        2176.4463444948196
+      ],
+      [
+        " we s t usu he ad ",
+        2176.426583170891
+      ],
+      [
+        " we s t uosu h ad ",
+        2176.421961426735
+      ],
+      [
+        " we s t o usu he ad ",
+        2176.407192349434
+      ],
+      [
+        " we s t usu h ad ",
+        2176.402200102806
+      ],
+      [
+        " we s t uosu he ad ",
+        2176.393813967705
+      ],
+      [
+        " we o s t usu he ad ",
+        2176.3926599025726
+      ],
+      [
+        " wed s t usu he ad ",
+        2176.3913716077805
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "when he and i happened to be left together he naturally wondered after having seen the beautiful wife where the lucky husband might be",
+    "pred_text_argmax": "wed u d a d d adad",
+    "pred_text_beam_search": [
+      [
+        " wed u d a d d adad ",
+        1693.7129940986633
+      ],
+      [
+        " wed u d a d d andad ",
+        1693.69467151165
+      ],
+      [
+        " wed u d a d d adad ",
+        1693.6909701824188
+      ],
+      [
+        " wed u d d d adad ",
+        1693.6842571496964
+      ],
+      [
+        " wed u d a d adad ",
+        1693.6750302314758
+      ],
+      [
+        " wed u d a d d andad ",
+        1693.6726475954056
+      ],
+      [
+        " wed u d d d andad ",
+        1693.665934562683
+      ],
+      [
+        " wed u d d d adad ",
+        1693.6622332334518
+      ],
+      [
+        " wed u d a d d adad ",
+        1693.6602108478546
+      ],
+      [
+        " wed u d a d andad ",
+        1693.6567076444626
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "how iniquitous was the conduct of the sons of theodosius in refusing the usual bounty by which the goths were bribed not to attack the empire the whole pent up deluge burst over the plains of italy and the western empire became from that day forth a dying idiot while the new invaders divided europe among themselves",
+    "pred_text_argmax": "wed e ad",
+    "pred_text_beam_search": [
+      [
+        " wed e ad ",
+        3867.3646745681763
+      ],
+      [
+        " wed e ad ",
+        3867.359951853752
+      ],
+      [
+        " wed e ad ",
+        3867.359349131584
+      ],
+      [
+        " wed e ad ",
+        3867.349588751793
+      ],
+      [
+        " we e ad ",
+        3867.345980167389
+      ],
+      [
+        " we e ad ",
+        3867.341257452965
+      ],
+      [
+        " we e ad ",
+        3867.340654730797
+      ],
+      [
+        " wed e ad ",
+        3867.337462425232
+      ],
+      [
+        " wed e ad ",
+        3867.332739710808
+      ],
+      [
+        " wed e ad ",
+        3867.33213698864
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "the lady and the guitar certainly passed the night at hill view villa but when his mother very angry and very frightened came up with him at about noon the house looked just as usual and no one was there but the charwoman",
+    "pred_text_argmax": "we e ad",
+    "pred_text_beam_search": [
+      [
+        " we e ad ",
+        2242.3629406690598
+      ],
+      [
+        " we e ad ",
+        2242.355657696724
+      ],
+      [
+        " we e ad ",
+        2242.3378328084946
+      ],
+      [
+        " we e ad ",
+        2242.3005546331406
+      ],
+      [
+        " we e ad ",
+        2242.2907510995865
+      ],
+      [
+        " wed e ad ",
+        2242.276088118553
+      ],
+      [
+        " we i e ad ",
+        2242.273287653923
+      ],
+      [
+        " wed e ad ",
+        2242.2688051462173
+      ],
+      [
+        " we i e ad ",
+        2242.2686918973923
+      ],
+      [
+        " we e e ad ",
+        2242.2680611610413
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "mode mix all the ingredients well together carefully mincing them very finely beat up the egg moisten with it and work the whole very smoothly together",
+    "pred_text_argmax": "we u tad",
+    "pred_text_beam_search": [
+      [
+        " we u tad ",
+        2279.4013093709946
+      ],
+      [
+        " we ue tad ",
+        2279.3996427059174
+      ],
+      [
+        " we u tad ",
+        2279.398673057556
+      ],
+      [
+        " we ue tad ",
+        2279.397006392479
+      ],
+      [
+        " we u o tad ",
+        2279.34195291996
+      ],
+      [
+        " we ue o tad ",
+        2279.340286254883
+      ],
+      [
+        " we u o tad ",
+        2279.3393166065216
+      ],
+      [
+        " we ue o tad ",
+        2279.3376499414444
+      ],
+      [
+        " we u tad ",
+        2279.326260447502
+      ],
+      [
+        " we ue tad ",
+        2279.324593782425
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "but you see a body never knows what traits poverty might bring out in em",
+    "pred_text_argmax": "we ad",
+    "pred_text_beam_search": [
+      [
+        " we ad ",
+        916.5317792892456
+      ],
+      [
+        " we ad ",
+        916.4927273988724
+      ],
+      [
+        " we ad ",
+        916.4740145206451
+      ],
+      [
+        " wed ad ",
+        916.4356598854065
+      ],
+      [
+        " we d ad ",
+        916.3966079950333
+      ],
+      [
+        " wed ad ",
+        916.377895116806
+      ],
+      [
+        " we e ad ",
+        916.3634197711945
+      ],
+      [
+        " we d ad ",
+        916.3388432264328
+      ],
+      [
+        " we ad ",
+        916.3277758359909
+      ],
+      [
+        " we e ad ",
+        916.3243678808212
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "colonel leonidas talbot regarded the white flag with feelings in which triumph and sadness were mingled strangely",
+    "pred_text_argmax": "wei d e au u u dtad",
+    "pred_text_beam_search": [
+      [
+        " wei d e au u u dtad ",
+        1503.8638741970062
+      ],
+      [
+        " wei d e au u u tad ",
+        1503.8526660203934
+      ],
+      [
+        " wei d e au u u dtad ",
+        1503.8431587219238
+      ],
+      [
+        " wei d e au u u tad ",
+        1503.831950545311
+      ],
+      [
+        " wei d e au ud u dtad ",
+        1503.8294458389282
+      ],
+      [
+        " wei d e au ud u tad ",
+        1503.8182376623154
+      ],
+      [
+        " wei d e au u d u dtad ",
+        1503.8087303638458
+      ],
+      [
+        " wei d e au ug u dtad ",
+        1503.7977627515793
+      ],
+      [
+        " wei d e au u d u tad ",
+        1503.797522187233
+      ],
+      [
+        " wei d e a u u dtad ",
+        1503.7937324047089
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "where is my brother now",
+    "pred_text_argmax": "we ad",
+    "pred_text_beam_search": [
+      [
+        " we ad ",
+        398.92927372455597
+      ],
+      [
+        " we d ad ",
+        398.81591069698334
+      ],
+      [
+        " we ad ",
+        398.7178906202316
+      ],
+      [
+        " we dad ",
+        398.604527592659
+      ],
+      [
+        " we ad ",
+        398.52337539196014
+      ],
+      [
+        " we tad ",
+        398.49768579006195
+      ],
+      [
+        " we e ad ",
+        398.4759382009506
+      ],
+      [
+        " we aud ",
+        398.4300585985184
+      ],
+      [
+        " we aod ",
+        398.4295847415924
+      ],
+      [
+        " we and ",
+        398.42655646800995
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "oh no i'm quite sure he didn't",
+    "pred_text_argmax": "we dtad",
+    "pred_text_beam_search": [
+      [
+        " we dtad ",
+        463.0970228910446
+      ],
+      [
+        " we dtad ",
+        463.06407034397125
+      ],
+      [
+        " we dad ",
+        463.05579602718353
+      ],
+      [
+        " we dad ",
+        463.02284348011017
+      ],
+      [
+        " we dtad ",
+        462.9606965780258
+      ],
+      [
+        " we d dtad ",
+        462.95840716362
+      ],
+      [
+        " we tad ",
+        462.93643403053284
+      ],
+      [
+        " we dtad ",
+        462.92774403095245
+      ],
+      [
+        " we d dtad ",
+        462.92545461654663
+      ],
+      [
+        " we dad ",
+        462.91946971416473
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "oh jem don't give way so i cannot bear to see you",
+    "pred_text_argmax": "wed d dtad",
+    "pred_text_beam_search": [
+      [
+        " wed d dtad ",
+        720.5757311582565
+      ],
+      [
+        " wed d dtad ",
+        720.4909547567368
+      ],
+      [
+        " wed d dtad ",
+        720.4587739706039
+      ],
+      [
+        " wed d dtad ",
+        720.3811528682709
+      ],
+      [
+        " wed d dad ",
+        720.3799662590027
+      ],
+      [
+        " wed d dtad ",
+        720.3739975690842
+      ],
+      [
+        " wed d dntad ",
+        720.3375440835953
+      ],
+      [
+        " wed d dtad ",
+        720.3247146606445
+      ],
+      [
+        " wed dtad ",
+        720.3222093582153
+      ],
+      [
+        " wed d dtad ",
+        720.3162461519241
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "nor was his sense of security increased when in shifting his position the torch fell from his grasp the fagots scattering as they slipped down between the limbs of the tree and whirling in ever diminishing circles until finally he heard them clatter on the rocks below",
+    "pred_text_argmax": "we o t t ue i utad",
+    "pred_text_beam_search": [
+      [
+        " we o t t ue i utad ",
+        2683.5485525131226
+      ],
+      [
+        " we o t t ue i utad ",
+        2683.541816473007
+      ],
+      [
+        " we o t t ue t i utad ",
+        2683.5402176380157
+      ],
+      [
+        " we o t t ue t i utad ",
+        2683.5334815979004
+      ],
+      [
+        " we o t ue i utad ",
+        2683.5317475795746
+      ],
+      [
+        " we o t ue i utad ",
+        2683.5250115394592
+      ],
+      [
+        " we o t ue t i utad ",
+        2683.523412704468
+      ],
+      [
+        " we o t t u e i utad ",
+        2683.51714015007
+      ],
+      [
+        " we o t ue t i utad ",
+        2683.5166766643524
+      ],
+      [
+        " we o t t ue i utad ",
+        2683.515104651451
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "mule did not desire to cross while i was trying to persuade him with a big stick a rock in his ear and a twister on his nose",
+    "pred_text_argmax": "wed h o d i u etad",
+    "pred_text_beam_search": [
+      [
+        " wed h o d i u etad ",
+        1395.7851026058197
+      ],
+      [
+        " wed h o d i u etad ",
+        1395.7402554750443
+      ],
+      [
+        " wed h o d iu etad ",
+        1395.733232498169
+      ],
+      [
+        " wed h o d i u e tad ",
+        1395.7325718402863
+      ],
+      [
+        " wed h ao d i u etad ",
+        1395.703867673874
+      ],
+      [
+        " wed h o d i u etad ",
+        1395.7036370038986
+      ],
+      [
+        " wed h o d i u et tad ",
+        1395.7030582427979
+      ],
+      [
+        " wed h o d u etad ",
+        1395.6927851438522
+      ],
+      [
+        " wed h o d iu etad ",
+        1395.6883853673935
+      ],
+      [
+        " wed h o d i u e tad ",
+        1395.6877247095108
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "we'd better not try to move him tom decided we'll get an ambulance",
+    "pred_text_argmax": "wend e u u e ad",
+    "pred_text_beam_search": [
+      [
+        " wend e u u e ad ",
+        938.5082404613495
+      ],
+      [
+        " wend e u u ue ad ",
+        938.5026953220367
+      ],
+      [
+        " wend e u u e ad ",
+        938.4866951704025
+      ],
+      [
+        " wed e u u e ad ",
+        938.4832012653351
+      ],
+      [
+        " wend e u u ue ad ",
+        938.4811500310898
+      ],
+      [
+        " wed e u u ue ad ",
+        938.4776561260223
+      ],
+      [
+        " wead e u u e ad ",
+        938.4711737632751
+      ],
+      [
+        " wenad e u u e ad ",
+        938.4697952270508
+      ],
+      [
+        " wead e u u ue ad ",
+        938.4656286239624
+      ],
+      [
+        " wenad e u u ue ad ",
+        938.464250087738
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "but he compromised by telling the boy that there would be no reply",
+    "pred_text_argmax": "we e h tad",
+    "pred_text_beam_search": [
+      [
+        " we e h tad ",
+        670.795124411583
+      ],
+      [
+        " we e t tad ",
+        670.7790920734406
+      ],
+      [
+        " we e tad ",
+        670.7730848789215
+      ],
+      [
+        " we e h tad ",
+        670.7619267702103
+      ],
+      [
+        " we e e tad ",
+        670.7512179613113
+      ],
+      [
+        " we e h tad ",
+        670.748802781105
+      ],
+      [
+        " we e t tad ",
+        670.7458944320679
+      ],
+      [
+        " we e ht tad ",
+        670.7435657978058
+      ],
+      [
+        " we e ht tad ",
+        670.7350046634674
+      ],
+      [
+        " we e t tad ",
+        670.7327704429626
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "the children proved themselves unusually bright pupils and by the time wabi was sixteen and minnetaki twelve one would not have known from their manner of speech that indian blood ran in their veins",
+    "pred_text_argmax": "we d u u d tad",
+    "pred_text_beam_search": [
+      [
+        " we d u u d tad ",
+        2046.6687874794006
+      ],
+      [
+        " we u d u u d tad ",
+        2046.644658923149
+      ],
+      [
+        " we d u u d tad ",
+        2046.6428518295288
+      ],
+      [
+        " we u d u u d tad ",
+        2046.6187232732773
+      ],
+      [
+        " we t d u u d tad ",
+        2046.5749824047089
+      ],
+      [
+        " we o d u u d tad ",
+        2046.5744060277939
+      ],
+      [
+        " we d i u u d tad ",
+        2046.5600653886795
+      ],
+      [
+        " we ut d u u d tad ",
+        2046.5508538484573
+      ],
+      [
+        " we uo d u u d tad ",
+        2046.5502774715424
+      ],
+      [
+        " we t d u u d tad ",
+        2046.549046754837
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "the floors were covered with matting and the hall laid with a thin rag carpet",
+    "pred_text_argmax": "we and d aduad",
+    "pred_text_beam_search": [
+      [
+        " we and d aduad ",
+        836.7812923192978
+      ],
+      [
+        " we ad d aduad ",
+        836.7699681520462
+      ],
+      [
+        " we and d aduad ",
+        836.7508207559586
+      ],
+      [
+        " we ad d aduad ",
+        836.739496588707
+      ],
+      [
+        " we and d aduad ",
+        836.7367092370987
+      ],
+      [
+        " we and d auad ",
+        836.7334626913071
+      ],
+      [
+        " we ad d aduad ",
+        836.7253850698471
+      ],
+      [
+        " we ad d auad ",
+        836.7221385240555
+      ],
+      [
+        " we and d auad ",
+        836.7029911279678
+      ],
+      [
+        " we ad d auad ",
+        836.6916669607162
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "cautiously placing a hand against the rocks to steady himself tad wisely concluded that hereafter it would not pay to be too curious",
+    "pred_text_argmax": "we o e e e i u u u i tad",
+    "pred_text_beam_search": [
+      [
+        " we o e e e i u u u i tad ",
+        1516.9729285240173
+      ],
+      [
+        " we o e e e i u u u i tad ",
+        1516.972738981247
+      ],
+      [
+        " we o e e he i u u u i tad ",
+        1516.9689708948135
+      ],
+      [
+        " we o e e he i u u u i tad ",
+        1516.9687813520432
+      ],
+      [
+        " we o e e e i u u u i tad ",
+        1516.96708214283
+      ],
+      [
+        " we o e e e i u u u i tad ",
+        1516.9668926000595
+      ],
+      [
+        " we o e e he i u u u i tad ",
+        1516.963124513626
+      ],
+      [
+        " we o e e he i u u u i tad ",
+        1516.9629349708557
+      ],
+      [
+        " we o e e e i u u u i tad ",
+        1516.9497482776642
+      ],
+      [
+        " we o e e e i u u u i tad ",
+        1516.9495587348938
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "the ancestors of the present pretender congal surnamed the squint eyed had twice received and cherished the licentious bards when under the ban of tara and his popularity with that still powerful order was one prop of his ambition",
+    "pred_text_argmax": "we u me te e d d ai ad",
+    "pred_text_beam_search": [
+      [
+        " we u me te e d d ai ad ",
+        3127.9192522764206
+      ],
+      [
+        " we u me te e d d hi ad ",
+        3127.9151060581207
+      ],
+      [
+        " we o u me te e d d ai ad ",
+        3127.913753390312
+      ],
+      [
+        " we o u me te e d d hi ad ",
+        3127.9096071720123
+      ],
+      [
+        " we u me te e d d ui ad ",
+        3127.892152428627
+      ],
+      [
+        " we u me te e d d ai ad ",
+        3127.892110824585
+      ],
+      [
+        " we u me te e d d hi ad ",
+        3127.887964606285
+      ],
+      [
+        " we o u me te e d d ui ad ",
+        3127.8866535425186
+      ],
+      [
+        " we o u me te e d d ai ad ",
+        3127.8866119384766
+      ],
+      [
+        " we u me te e d d i ad ",
+        3127.8843944072723
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "how asked tad",
+    "pred_text_argmax": "we d tad",
+    "pred_text_beam_search": [
+      [
+        " we d tad ",
+        446.62600314617157
+      ],
+      [
+        " we d tad ",
+        446.5899295806885
+      ],
+      [
+        " we d a tad ",
+        446.23598754405975
+      ],
+      [
+        " we d t tad ",
+        446.2352405786514
+      ],
+      [
+        " we d e tad ",
+        446.22508323192596
+      ],
+      [
+        " we d h tad ",
+        446.216242313385
+      ],
+      [
+        " we d l tad ",
+        446.2082612514496
+      ],
+      [
+        " we d g tad ",
+        446.2063399553299
+      ],
+      [
+        " we d u tad ",
+        446.2033305168152
+      ],
+      [
+        " we d w tad ",
+        446.20114517211914
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "when a married woman has followers and the husband don't go the wrong side of the post too or it ain't proved again him that he do they'll never let her have nothing to do with the children",
+    "pred_text_argmax": "we i ad",
+    "pred_text_beam_search": [
+      [
+        " we i ad ",
+        1812.3904604911804
+      ],
+      [
+        " we ad ",
+        1812.3765738010406
+      ],
+      [
+        " we i ad ",
+        1812.375403881073
+      ],
+      [
+        " we ad ",
+        1812.3615171909332
+      ],
+      [
+        " we ti ad ",
+        1812.3265894651413
+      ],
+      [
+        " we t ad ",
+        1812.3127027750015
+      ],
+      [
+        " we ti ad ",
+        1812.3115328550339
+      ],
+      [
+        " we o i ad ",
+        1812.3075675964355
+      ],
+      [
+        " we e i ad ",
+        1812.2987759113312
+      ],
+      [
+        " we t ad ",
+        1812.297646164894
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "that night the enemy slipped away leaving hundreds and hundreds of his dead and wounded on the field",
+    "pred_text_argmax": "we u no ad",
+    "pred_text_beam_search": [
+      [
+        " we u no ad ",
+        1195.8545707464218
+      ],
+      [
+        " we u no ad ",
+        1195.8376281261444
+      ],
+      [
+        " we u nod ad ",
+        1195.8323248624802
+      ],
+      [
+        " we u nod ad ",
+        1195.8153822422028
+      ],
+      [
+        " we u no e ad ",
+        1195.806059718132
+      ],
+      [
+        " we u no e ad ",
+        1195.7891170978546
+      ],
+      [
+        " we u no i ad ",
+        1195.7847108840942
+      ],
+      [
+        " we u nod e ad ",
+        1195.7838138341904
+      ],
+      [
+        " we u no i ad ",
+        1195.7677682638168
+      ],
+      [
+        " we u nod e ad ",
+        1195.766871213913
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "the court was spacious well paved and perfectly clean there being probably another entrance behind the stables for removing the litter",
+    "pred_text_argmax": "we e d t tad",
+    "pred_text_beam_search": [
+      [
+        " we e d t tad ",
+        1516.3794541358948
+      ],
+      [
+        " we e d t t tad ",
+        1516.300703048706
+      ],
+      [
+        " we e d t tad ",
+        1516.260557770729
+      ],
+      [
+        " we e d t tad ",
+        1516.2437772750854
+      ],
+      [
+        " we e o d t tad ",
+        1516.2286591529846
+      ],
+      [
+        " we e d a t tad ",
+        1516.2168644666672
+      ],
+      [
+        " we e t d t tad ",
+        1516.2025781869888
+      ],
+      [
+        " we e od t tad ",
+        1516.1831068992615
+      ],
+      [
+        " we e d t t tad ",
+        1516.1818066835403
+      ],
+      [
+        " we e d t t tad ",
+        1516.1650261878967
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "it went on to say that the two men who had carried her off had taken her to such a place where they had an hour later been met by the other six and that they had all repaired to the two swords where they had spent an hour in drinking",
+    "pred_text_argmax": "we ue d ad d d tad",
+    "pred_text_beam_search": [
+      [
+        " we ue d ad d d tad ",
+        2741.756291627884
+      ],
+      [
+        " we e d ad d d tad ",
+        2741.737446308136
+      ],
+      [
+        " we ue d ad d d tad ",
+        2741.7174158096313
+      ],
+      [
+        " we ue d ad d d tad ",
+        2741.7160863876343
+      ],
+      [
+        " we e d ad d d tad ",
+        2741.6985704898834
+      ],
+      [
+        " we e d ad d d tad ",
+        2741.6972410678864
+      ],
+      [
+        " we ue d u ad d d tad ",
+        2741.653037428856
+      ],
+      [
+        " we e d u ad d d tad ",
+        2741.634192109108
+      ],
+      [
+        " we ue d ad d d tad ",
+        2741.622040271759
+      ],
+      [
+        " we ue d u ad d d tad ",
+        2741.6141616106033
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "a faint fetid smell came from him and a thread of green liquid oozed from his crushed head",
+    "pred_text_argmax": "we oe t u uad",
+    "pred_text_beam_search": [
+      [
+        " we oe t u uad ",
+        1175.667464017868
+      ],
+      [
+        " we oe et u uad ",
+        1175.6374932527542
+      ],
+      [
+        " we oe ht u uad ",
+        1175.6140670776367
+      ],
+      [
+        " we oe t u uad ",
+        1175.6079347133636
+      ],
+      [
+        " we oe e t u uad ",
+        1175.6023254394531
+      ],
+      [
+        " we oe t u uad ",
+        1175.5808271169662
+      ],
+      [
+        " we oe et u uad ",
+        1175.5779639482498
+      ],
+      [
+        " we ose t u uad ",
+        1175.5760616064072
+      ],
+      [
+        " we oe e et u uad ",
+        1175.5723546743393
+      ],
+      [
+        " we oe t ui uad ",
+        1175.5641776323318
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "the boy hastened away and the manager fell to his musings",
+    "pred_text_argmax": "we ad",
+    "pred_text_beam_search": [
+      [
+        " we ad ",
+        715.1438870429993
+      ],
+      [
+        " we u ad ",
+        715.1240845918655
+      ],
+      [
+        " we ad ",
+        715.0863773822784
+      ],
+      [
+        " we u ad ",
+        715.0665749311447
+      ],
+      [
+        " we u ad ",
+        714.9614977836609
+      ],
+      [
+        " wed ad ",
+        714.9267456531525
+      ],
+      [
+        " we ad ",
+        714.9237905740738
+      ],
+      [
+        " wed u ad ",
+        714.9069432020187
+      ],
+      [
+        " we u ad ",
+        714.9039881229401
+      ],
+      [
+        " wed ad ",
+        714.8692359924316
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "it was on one of these gravel beds that i met my adventure",
+    "pred_text_argmax": "wed ie i ad",
+    "pred_text_beam_search": [
+      [
+        " wed ie i ad ",
+        788.2312572002411
+      ],
+      [
+        " we ie i ad ",
+        788.2088553905487
+      ],
+      [
+        " wed iae i ad ",
+        788.1614966392517
+      ],
+      [
+        " we iae i ad ",
+        788.1390948295593
+      ],
+      [
+        " we d ie i ad ",
+        788.1299664974213
+      ],
+      [
+        " wed iue i ad ",
+        788.1180087327957
+      ],
+      [
+        " wed ite i ad ",
+        788.1077454090118
+      ],
+      [
+        " we ie i ad ",
+        788.1075646877289
+      ],
+      [
+        " we iue i ad ",
+        788.0956069231033
+      ],
+      [
+        " we ite i ad ",
+        788.0853435993195
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "our upper lips are so small they don't matter",
+    "pred_text_argmax": "we ad",
+    "pred_text_beam_search": [
+      [
+        " we ad ",
+        527.9760458469391
+      ],
+      [
+        " we ad ",
+        527.9653949737549
+      ],
+      [
+        " we a ad ",
+        527.9054770469666
+      ],
+      [
+        " we a ad ",
+        527.8948261737823
+      ],
+      [
+        " we ad ",
+        527.8818436861038
+      ],
+      [
+        " we a ad ",
+        527.8112748861313
+      ],
+      [
+        " we a ad ",
+        527.7604277133942
+      ],
+      [
+        " we ad ",
+        527.7594796419144
+      ],
+      [
+        " we a ad ",
+        527.7005097866058
+      ],
+      [
+        " we ad ",
+        527.6968672275543
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "randal looked again at the first words in the paragraph",
+    "pred_text_argmax": "we ha ad",
+    "pred_text_beam_search": [
+      [
+        " we ha ad ",
+        673.0785667896271
+      ],
+      [
+        " we ua ad ",
+        673.0761435031891
+      ],
+      [
+        " we ha iad ",
+        673.0751912593842
+      ],
+      [
+        " we hu ad ",
+        673.0738815069199
+      ],
+      [
+        " we ua iad ",
+        673.0727679729462
+      ],
+      [
+        " we u ad ",
+        673.0714582204819
+      ],
+      [
+        " we hu iad ",
+        673.0705059766769
+      ],
+      [
+        " we u iad ",
+        673.068082690239
+      ],
+      [
+        " we hau ad ",
+        673.0649304389954
+      ],
+      [
+        " we uau ad ",
+        673.0625071525574
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "even on this ledge of human society there was a stunted growth of shoplets which had taken root and vegetated somehow though as in an air mercantile of the bleakest",
+    "pred_text_argmax": "wed ia a u d dad",
+    "pred_text_beam_search": [
+      [
+        " wed ia a u d dad ",
+        1963.3499289751053
+      ],
+      [
+        " wed a a u d dad ",
+        1963.3491666316986
+      ],
+      [
+        " wed ia a u dad ",
+        1963.344062924385
+      ],
+      [
+        " wed a a u dad ",
+        1963.3433005809784
+      ],
+      [
+        " we ia a u d dad ",
+        1963.3382436037064
+      ],
+      [
+        " we a a u d dad ",
+        1963.3374812602997
+      ],
+      [
+        " wed ia a u d dad ",
+        1963.3352737426758
+      ],
+      [
+        " wed o ia a u d dad ",
+        1963.334851026535
+      ],
+      [
+        " wed a a u d dad ",
+        1963.334511399269
+      ],
+      [
+        " wed o a a u d dad ",
+        1963.3340886831284
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "some of the preparations of maize flour are very good and when partaken in moderation suitable food for almost everybody",
+    "pred_text_argmax": "we d u u u ad",
+    "pred_text_beam_search": [
+      [
+        " we d u u u ad ",
+        1770.2082242965698
+      ],
+      [
+        " we d u u u ad ",
+        1770.1986737251282
+      ],
+      [
+        " we d u u u ad ",
+        1770.1513347625732
+      ],
+      [
+        " we d u u u ad ",
+        1770.1417841911316
+      ],
+      [
+        " we d u u u ad ",
+        1770.1075040102005
+      ],
+      [
+        " we d u u u ad ",
+        1770.0979534387589
+      ],
+      [
+        " we d u u u ad ",
+        1770.0667370557785
+      ],
+      [
+        " we d u u u ad ",
+        1770.0571864843369
+      ],
+      [
+        " we d u u u ad ",
+        1770.0522582530975
+      ],
+      [
+        " we d u u u ad ",
+        1770.050614476204
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "irolg looked amazed at the sudden fury of the attack then smiled",
+    "pred_text_argmax": "wed d u ad and ad",
+    "pred_text_beam_search": [
+      [
+        " wed d u ad and ad ",
+        1076.8806278705597
+      ],
+      [
+        " wed d ad and ad ",
+        1076.87959420681
+      ],
+      [
+        " wed d u u ad and ad ",
+        1076.864512205124
+      ],
+      [
+        " wed d u ad and ad ",
+        1076.8634785413742
+      ],
+      [
+        " wed d u ad and ad ",
+        1076.851998925209
+      ],
+      [
+        " wed d ad and ad ",
+        1076.8509652614594
+      ],
+      [
+        " wed d a ad and ad ",
+        1076.850813627243
+      ],
+      [
+        " wed d u ad ad ad ",
+        1076.8428186178207
+      ],
+      [
+        " wed d ad ad ad ",
+        1076.841784954071
+      ],
+      [
+        " wed d u u ad and ad ",
+        1076.8358832597733
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "we've got a hard drive before us and every man must be fit as a fiddle",
+    "pred_text_argmax": "we u i u d utad",
+    "pred_text_beam_search": [
+      [
+        " we u i u d utad ",
+        693.9102277755737
+      ],
+      [
+        " we a u i u d utad ",
+        693.8867497444153
+      ],
+      [
+        " we u i us d utad ",
+        693.8498367071152
+      ],
+      [
+        " we u i u d tad ",
+        693.8369101285934
+      ],
+      [
+        " we a u i us d utad ",
+        693.8263586759567
+      ],
+      [
+        " we a u i u d tad ",
+        693.813432097435
+      ],
+      [
+        " we u i u o d utad ",
+        693.7852429151535
+      ],
+      [
+        " we us i u d utad ",
+        693.7783125638962
+      ],
+      [
+        " we u i us d tad ",
+        693.7765190601349
+      ],
+      [
+        " we d u i u d utad ",
+        693.7743709087372
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "perhaps the profession of doing good may be full but every body should be kind at least to himself",
+    "pred_text_argmax": "wed d d d i d d d ad",
+    "pred_text_beam_search": [
+      [
+        " wed d d d i d d d ad ",
+        1343.4625244140625
+      ],
+      [
+        " wed d d d di d d d ad ",
+        1343.4589629173279
+      ],
+      [
+        " wed d d d i d d d ad ",
+        1343.4458574056625
+      ],
+      [
+        " wed d ad d i d d d ad ",
+        1343.44455742836
+      ],
+      [
+        " wed d d d di d d d ad ",
+        1343.442295908928
+      ],
+      [
+        " wed d ad d di d d d ad ",
+        1343.4409959316254
+      ],
+      [
+        " wed d ad d i d d d ad ",
+        1343.42789041996
+      ],
+      [
+        " wed d ad d di d d d ad ",
+        1343.4243289232254
+      ],
+      [
+        " wed d d d i d d d ad ",
+        1343.404263496399
+      ],
+      [
+        " wed i d d d i d d d ad ",
+        1343.402757883072
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "so here it was spread out clear before him and now he knew what to expect",
+    "pred_text_argmax": "we e e e e ad",
+    "pred_text_beam_search": [
+      [
+        " we e e e e ad ",
+        830.8369396924973
+      ],
+      [
+        " we e e e e ad ",
+        830.7537964582443
+      ],
+      [
+        " we e e e ad ",
+        830.7178444862366
+      ],
+      [
+        " we e e e ad ",
+        830.6974105834961
+      ],
+      [
+        " we e e e e ad ",
+        830.661967754364
+      ],
+      [
+        " we e e e ad ",
+        830.6571062803268
+      ],
+      [
+        " we e e e e tad ",
+        830.655381321907
+      ],
+      [
+        " we e e e ad ",
+        830.6484134197235
+      ],
+      [
+        " we e e e e ad ",
+        830.6400322914124
+      ],
+      [
+        " we e e e ad ",
+        830.6347012519836
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "i have not the slightest doubt that in high winds its red tiles were blown out to the great annoyance of the pastor and congregation",
+    "pred_text_argmax": "we e t d ad",
+    "pred_text_beam_search": [
+      [
+        " we e t d ad ",
+        1400.5177148580551
+      ],
+      [
+        " we e t d ad ",
+        1400.5170559883118
+      ],
+      [
+        " we t d ad ",
+        1400.5148978233337
+      ],
+      [
+        " we t d ad ",
+        1400.5142389535904
+      ],
+      [
+        " we e t d ad ",
+        1400.4867527484894
+      ],
+      [
+        " we e t d ad ",
+        1400.486093878746
+      ],
+      [
+        " we t d ad ",
+        1400.483935713768
+      ],
+      [
+        " we t d ad ",
+        1400.4832768440247
+      ],
+      [
+        " we e e t d ad ",
+        1400.4807932376862
+      ],
+      [
+        " we e e t d ad ",
+        1400.4801343679428
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "without question he had become overnight the most widely known archaeologist in history",
+    "pred_text_argmax": "weutd ut u dad",
+    "pred_text_beam_search": [
+      [
+        " weutd ut u dad ",
+        1318.7032363414764
+      ],
+      [
+        " weutd ut u dad ",
+        1318.650752067566
+      ],
+      [
+        " wedutd ut u dad ",
+        1318.6454902887344
+      ],
+      [
+        " wetd ut u dad ",
+        1318.6437747478485
+      ],
+      [
+        " weutd ut u dad ",
+        1318.6402380466461
+      ],
+      [
+        " wedutd ut u dad ",
+        1318.593006014824
+      ],
+      [
+        " wetd ut u dad ",
+        1318.591290473938
+      ],
+      [
+        " weautd ut u dad ",
+        1318.5906348228455
+      ],
+      [
+        " weutd ut u dad ",
+        1318.5877537727356
+      ],
+      [
+        " wedtd ut u dad ",
+        1318.5860286951065
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "as a result instead of stopping when he reached the hat the boy kept on going",
+    "pred_text_argmax": "we ae i tad",
+    "pred_text_beam_search": [
+      [
+        " we ae i tad ",
+        782.5134484767914
+      ],
+      [
+        " we ae tad ",
+        782.5071719884872
+      ],
+      [
+        " we o ae i tad ",
+        782.497868180275
+      ],
+      [
+        " we o ae tad ",
+        782.4915916919708
+      ],
+      [
+        " we ae i tad ",
+        782.4896436929703
+      ],
+      [
+        " we ae tad ",
+        782.4833672046661
+      ],
+      [
+        " we o ae i tad ",
+        782.4740633964539
+      ],
+      [
+        " we o ae tad ",
+        782.4677869081497
+      ],
+      [
+        " we ae i tad ",
+        782.4447696208954
+      ],
+      [
+        " we ae tad ",
+        782.4384931325912
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "the emperor's daughter",
+    "pred_text_argmax": "wead",
+    "pred_text_beam_search": [
+      [
+        " wead ",
+        401.9147231578827
+      ],
+      [
+        " wedad ",
+        401.85948169231415
+      ],
+      [
+        " wedad ",
+        401.78533947467804
+      ],
+      [
+        " wenad ",
+        401.3705348968506
+      ],
+      [
+        " wetad ",
+        401.36236000061035
+      ],
+      [
+        " wead ",
+        401.3553282022476
+      ],
+      [
+        " we ad ",
+        401.34998738765717
+      ],
+      [
+        " weoad ",
+        401.34574019908905
+      ],
+      [
+        " weiad ",
+        401.3444548845291
+      ],
+      [
+        " wecad ",
+        401.34328615665436
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "after my death a pink marble statue of me will be set up in the grand court with the statues of the other kings and queens who have ruled this land and all the pinkies in ages to come will then honor me as having been a just and upright queen that is my reward",
+    "pred_text_argmax": "we u e a ad",
+    "pred_text_beam_search": [
+      [
+        " we u e a ad ",
+        3008.267124891281
+      ],
+      [
+        " we u e a ad ",
+        3008.2424503564835
+      ],
+      [
+        " we u e a ad ",
+        3008.225385785103
+      ],
+      [
+        " we u e a ad ",
+        3008.2212913036346
+      ],
+      [
+        " we u e d a ad ",
+        3008.209164619446
+      ],
+      [
+        " we u e a ad ",
+        3008.200711250305
+      ],
+      [
+        " we u e o a ad ",
+        3008.1920090913773
+      ],
+      [
+        " we u e d a ad ",
+        3008.184490084648
+      ],
+      [
+        " we u e a ad ",
+        3008.1795521974564
+      ],
+      [
+        " we u e d a ad ",
+        3008.1674255132675
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "long ago there lived a merchant who had three daughters",
+    "pred_text_argmax": "we h e ad",
+    "pred_text_beam_search": [
+      [
+        " we h e ad ",
+        660.7766530513763
+      ],
+      [
+        " we hu e ad ",
+        660.7694994211197
+      ],
+      [
+        " we uh e ad ",
+        660.762831568718
+      ],
+      [
+        " we u e ad ",
+        660.7556779384613
+      ],
+      [
+        " we h ad ",
+        660.7163076400757
+      ],
+      [
+        " we hu ad ",
+        660.709154009819
+      ],
+      [
+        " we uh ad ",
+        660.7024861574173
+      ],
+      [
+        " we u ad ",
+        660.6953325271606
+      ],
+      [
+        " we e ad ",
+        660.6908694505692
+      ],
+      [
+        " we ah e ad ",
+        660.6888929605484
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "i feel like a boy out of school or rather a man out of prison and must enjoy my liberty in some way",
+    "pred_text_argmax": "we e tad",
+    "pred_text_beam_search": [
+      [
+        " we e tad ",
+        1101.7406921386719
+      ],
+      [
+        " we e tad ",
+        1101.7085701227188
+      ],
+      [
+        " w e tad ",
+        1101.6995778083801
+      ],
+      [
+        " w e tad ",
+        1101.667455792427
+      ],
+      [
+        " we e e tad ",
+        1101.665455341339
+      ],
+      [
+        " we e e tad ",
+        1101.633333325386
+      ],
+      [
+        " w e e tad ",
+        1101.6243410110474
+      ],
+      [
+        " we et tad ",
+        1101.5995398759842
+      ],
+      [
+        " w e e tad ",
+        1101.5922189950943
+      ],
+      [
+        " we e tad ",
+        1101.5866751670837
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "i'm here because the matter is of utmost importance and brandd is the one i must see now stand aside",
+    "pred_text_argmax": "we d a d d ad",
+    "pred_text_beam_search": [
+      [
+        " we d a d d ad ",
+        1459.5143061876297
+      ],
+      [
+        " we d a d d tad ",
+        1459.5080597400665
+      ],
+      [
+        " we d a d d uad ",
+        1459.4912095069885
+      ],
+      [
+        " we d a d d utad ",
+        1459.4849630594254
+      ],
+      [
+        " we d d d ad ",
+        1459.4167317152023
+      ],
+      [
+        " we d d d tad ",
+        1459.4104852676392
+      ],
+      [
+        " we d d d uad ",
+        1459.3936350345612
+      ],
+      [
+        " we d d d utad ",
+        1459.387388586998
+      ],
+      [
+        " wed a d d ad ",
+        1459.382938861847
+      ],
+      [
+        " we a d d ad ",
+        1459.3776631355286
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "we may do so was my reply but what about our worthy guide",
+    "pred_text_argmax": "we t h ut u utad",
+    "pred_text_beam_search": [
+      [
+        " we t h ut u utad ",
+        809.8024322986603
+      ],
+      [
+        " we t h ut utad ",
+        809.7838404178619
+      ],
+      [
+        " we t h u u utad ",
+        809.7696107625961
+      ],
+      [
+        " we t h u utad ",
+        809.7510188817978
+      ],
+      [
+        " we t h ut u uitad ",
+        809.735383272171
+      ],
+      [
+        " we t h uit u utad ",
+        809.733882188797
+      ],
+      [
+        " we at h ut u utad ",
+        809.7322648763657
+      ],
+      [
+        " we t h ut uitad ",
+        809.7167913913727
+      ],
+      [
+        " we t h uit utad ",
+        809.7152903079987
+      ],
+      [
+        " we at h ut utad ",
+        809.7136729955673
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "right before me i saw the long dry grass all bending toward a common center and i knew that it was an old well and that my comrade had fallen in it",
+    "pred_text_argmax": "weo ad",
+    "pred_text_beam_search": [
+      [
+        " weo ad ",
+        1831.2471215724945
+      ],
+      [
+        " weo u ad ",
+        1831.1923924684525
+      ],
+      [
+        " wedo ad ",
+        1831.151281952858
+      ],
+      [
+        " weo uad ",
+        1831.133473277092
+      ],
+      [
+        " we ad ",
+        1831.1245794296265
+      ],
+      [
+        " weo ad ",
+        1831.1214108467102
+      ],
+      [
+        " wedo u ad ",
+        1831.096552848816
+      ],
+      [
+        " weo a ad ",
+        1831.0856292247772
+      ],
+      [
+        " weo u uad ",
+        1831.07874417305
+      ],
+      [
+        " we u ad ",
+        1831.0698503255844
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "his success seems to have been the outgrowth of hard study and ability to perform the most exhaustive labor without fatigue",
+    "pred_text_argmax": "we og auhe e d he uo dtad",
+    "pred_text_beam_search": [
+      [
+        " we og auhe e d he uo dtad ",
+        1553.5273141860962
+      ],
+      [
+        " we g auhe e d he uo dtad ",
+        1553.5270832777023
+      ],
+      [
+        " we og auhe e d e uo dtad ",
+        1553.522593140602
+      ],
+      [
+        " we g auhe e d e uo dtad ",
+        1553.5223622322083
+      ],
+      [
+        " we og auhe e d he uo dtad ",
+        1553.4937546253204
+      ],
+      [
+        " we g auhe e d he uo dtad ",
+        1553.4935237169266
+      ],
+      [
+        " we og auhe e d e uo dtad ",
+        1553.4890335798264
+      ],
+      [
+        " we g auhe e d e uo dtad ",
+        1553.4888026714325
+      ],
+      [
+        " we og auhe e d he uo dtad ",
+        1553.4825743436813
+      ],
+      [
+        " we g auhe e d he uo dtad ",
+        1553.4823434352875
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "yes many times",
+    "pred_text_argmax": "wed ad",
+    "pred_text_beam_search": [
+      [
+        " wed ad ",
+        477.7118810415268
+      ],
+      [
+        " wed ad ",
+        477.69255113601685
+      ],
+      [
+        " we ad ",
+        477.64937114715576
+      ],
+      [
+        " we ad ",
+        477.6300412416458
+      ],
+      [
+        " wedad ",
+        477.4286426305771
+      ],
+      [
+        " wed dad ",
+        477.40573132038116
+      ],
+      [
+        " wed dad ",
+        477.3864014148712
+      ],
+      [
+        " wead ",
+        477.36613273620605
+      ],
+      [
+        " we dad ",
+        477.34322142601013
+      ],
+      [
+        " we dad ",
+        477.3238915205002
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "he watched him gesticulating and murmuring in the kitchen",
+    "pred_text_argmax": "wedad",
+    "pred_text_beam_search": [
+      [
+        " wedad ",
+        584.3339694738388
+      ],
+      [
+        " wedad ",
+        584.2573478221893
+      ],
+      [
+        " wedad ",
+        584.2111418247223
+      ],
+      [
+        " we dad ",
+        584.0757735967636
+      ],
+      [
+        " wedad ",
+        584.0606342554092
+      ],
+      [
+        " we dad ",
+        583.9991519451141
+      ],
+      [
+        " we dad ",
+        583.9529459476471
+      ],
+      [
+        " wed dad ",
+        583.9220227003098
+      ],
+      [
+        " wedad ",
+        583.9068833589554
+      ],
+      [
+        " wendad ",
+        583.8766007423401
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "let me take off your coat and your boots they're oozing water",
+    "pred_text_argmax": "we d dad",
+    "pred_text_beam_search": [
+      [
+        " we d dad ",
+        711.0349016189575
+      ],
+      [
+        " we d dad ",
+        711.0136442184448
+      ],
+      [
+        " we d dad ",
+        710.9190120697021
+      ],
+      [
+        " we o d dad ",
+        710.9073362350464
+      ],
+      [
+        " we d dad ",
+        710.8977546691895
+      ],
+      [
+        " we o d dad ",
+        710.8860788345337
+      ],
+      [
+        " wed d dad ",
+        710.8815532922745
+      ],
+      [
+        " wed d dad ",
+        710.8602958917618
+      ],
+      [
+        " we d d dad ",
+        710.8064908981323
+      ],
+      [
+        " we o d dad ",
+        710.791446685791
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "he was in a fevered state of mind owing to the blight his wife's action threatened to cast upon his entire future",
+    "pred_text_argmax": "we u t ue tad",
+    "pred_text_beam_search": [
+      [
+        " we u t ue tad ",
+        1235.768010854721
+      ],
+      [
+        " we d u t ue tad ",
+        1235.7469044923782
+      ],
+      [
+        " we u ue tad ",
+        1235.7389168739319
+      ],
+      [
+        " we u t uet tad ",
+        1235.7266039848328
+      ],
+      [
+        " we a u t ue tad ",
+        1235.7253012657166
+      ],
+      [
+        " we d u ue tad ",
+        1235.717810511589
+      ],
+      [
+        " we u t ue tad ",
+        1235.7060021162033
+      ],
+      [
+        " we d u t uet tad ",
+        1235.70549762249
+      ],
+      [
+        " we d a u t ue tad ",
+        1235.7041949033737
+      ],
+      [
+        " we u uet tad ",
+        1235.6975100040436
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "the chicken crept through the pales of the coop and ran with some show of liveliness to her feet while chanticleer and the ladies of his household regarded her with queer sidelong glances and then croaked one to another as if communicating their sage opinions of her character",
+    "pred_text_argmax": "we d u dad nd u d u ad g adad",
+    "pred_text_beam_search": [
+      [
+        " we d u dad nd u d u ad g adad ",
+        2855.2759006023407
+      ],
+      [
+        " we d u dad n u d u ad g adad ",
+        2855.265402317047
+      ],
+      [
+        " we d e u dad nd u d u ad g adad ",
+        2855.260613679886
+      ],
+      [
+        " we d u dad nd d u ad g adad ",
+        2855.256496310234
+      ],
+      [
+        " we d e u dad n u d u ad g adad ",
+        2855.2501153945923
+      ],
+      [
+        " we d u dad n d u ad g adad ",
+        2855.2459980249405
+      ],
+      [
+        " we d e u dad nd d u ad g adad ",
+        2855.2412093877792
+      ],
+      [
+        " we d u dad nd u u ad g adad ",
+        2855.238732933998
+      ],
+      [
+        " we d u d dad nd u d u ad g adad ",
+        2855.235873222351
+      ],
+      [
+        " we d e u dad n d u ad g adad ",
+        2855.2307111024857
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "he was wise in his own conceit",
+    "pred_text_argmax": "wed t dad",
+    "pred_text_beam_search": [
+      [
+        " wed t dad ",
+        509.2264611721039
+      ],
+      [
+        " wed dad ",
+        509.2088215351105
+      ],
+      [
+        " we t dad ",
+        509.1550477743149
+      ],
+      [
+        " we dad ",
+        509.1374081373215
+      ],
+      [
+        " wed ot dad ",
+        508.9967908859253
+      ],
+      [
+        " wed o dad ",
+        508.9791512489319
+      ],
+      [
+        " wed t dad ",
+        508.9469199180603
+      ],
+      [
+        " wed dad ",
+        508.9292802810669
+      ],
+      [
+        " we ot dad ",
+        508.9253774881363
+      ],
+      [
+        " we o dad ",
+        508.9077378511429
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "there were a good many sheep which i knew as two or three black ewes and a black lamb or two and several others which had some distinguishing mark whereby i could tell them",
+    "pred_text_argmax": "we i u ui e due ae tad",
+    "pred_text_beam_search": [
+      [
+        " we i u ui e due ae tad ",
+        1751.5645073652267
+      ],
+      [
+        " we t i u ui e due ae tad ",
+        1751.5585771799088
+      ],
+      [
+        " we u i u ui e due ae tad ",
+        1751.5261058807373
+      ],
+      [
+        " we i u ui e due ae tad ",
+        1751.5260462760925
+      ],
+      [
+        " we t u i u ui e due ae tad ",
+        1751.5201756954193
+      ],
+      [
+        " we t i u ui e due ae tad ",
+        1751.5201160907745
+      ],
+      [
+        " we i u ui e u due ae tad ",
+        1751.490976691246
+      ],
+      [
+        " we i u ui e due ahe tad ",
+        1751.487716794014
+      ],
+      [
+        " we u i u ui e due ae tad ",
+        1751.487644791603
+      ],
+      [
+        " we t i u ui e u due ae tad ",
+        1751.485046505928
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "there was little time to lose in making preparations and the fourth day following the receipt of wabi's letter found rod and his mother waiting for the train which was to whirl the boy into his new life",
+    "pred_text_argmax": "wed d dad",
+    "pred_text_beam_search": [
+      [
+        " wed d dad ",
+        1997.1332956552505
+      ],
+      [
+        " wed d dtad ",
+        1997.0738447904587
+      ],
+      [
+        " wed d dad ",
+        1997.019133090973
+      ],
+      [
+        " wed d dad ",
+        1997.0168058872223
+      ],
+      [
+        " wed d d ad ",
+        1997.013585805893
+      ],
+      [
+        " wed d d dad ",
+        1996.99873316288
+      ],
+      [
+        " wed d dad ",
+        1996.960475564003
+      ],
+      [
+        " wed d dtad ",
+        1996.959682226181
+      ],
+      [
+        " wed d dtad ",
+        1996.9573550224304
+      ],
+      [
+        " wed d d tad ",
+        1996.954134941101
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "nor could it seem strange or incredible that the first of these aeons the logos or word of god of the same substance with the father should descend upon earth to deliver the human race from vice and error and to conduct them in the paths of life and immortality",
+    "pred_text_argmax": "we t e oe t o e u te t t e ue e tad",
+    "pred_text_beam_search": [
+      [
+        " we t e oe t o e u te t t e ue e tad ",
+        2918.8047965765
+      ],
+      [
+        " we t e oe t o e u i te t t e ue e tad ",
+        2918.8000367879868
+      ],
+      [
+        " we t e ote t o e u te t t e ue e tad ",
+        2918.7959681749344
+      ],
+      [
+        " we t e oe t o e u te t e t e ue e tad ",
+        2918.792897462845
+      ],
+      [
+        " we t e ote t o e u i te t t e ue e tad ",
+        2918.791208386421
+      ],
+      [
+        " we t e oe t o e u i te t e t e ue e tad ",
+        2918.7881376743317
+      ],
+      [
+        " we t e ote t o e u te t e t e ue e tad ",
+        2918.7840690612793
+      ],
+      [
+        " we t e ote t o e u i te t e t e ue e tad ",
+        2918.779309272766
+      ],
+      [
+        " we e oe t o e u te t t e ue e tad ",
+        2918.779299378395
+      ],
+      [
+        " we e oe t o e u i te t t e ue e tad ",
+        2918.774539589882
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "the kingdom of northumbria as the name implies embraced nearly all the country from the humber to the pictish border",
+    "pred_text_argmax": "we t d ad",
+    "pred_text_beam_search": [
+      [
+        " we t d ad ",
+        1452.9592146873474
+      ],
+      [
+        " we t d dad ",
+        1452.9197767972946
+      ],
+      [
+        " we t d ad ",
+        1452.9099714756012
+      ],
+      [
+        " we t d ad ",
+        1452.8931488990784
+      ],
+      [
+        " we t d adad ",
+        1452.8705335855484
+      ],
+      [
+        " we t d dad ",
+        1452.8537110090256
+      ],
+      [
+        " we t d ad ",
+        1452.8439056873322
+      ],
+      [
+        " we t d ad ",
+        1452.815262556076
+      ],
+      [
+        " we t d adad ",
+        1452.8044677972794
+      ],
+      [
+        " wed t d ad ",
+        1452.7897095680237
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "just then he was in no mood to think of the sorrows",
+    "pred_text_argmax": "we d dad",
+    "pred_text_beam_search": [
+      [
+        " we d dad ",
+        843.9960466623306
+      ],
+      [
+        " we dad dad ",
+        843.9120407104492
+      ],
+      [
+        " we d dad ",
+        843.8815469741821
+      ],
+      [
+        " we ad dad ",
+        843.8796573877335
+      ],
+      [
+        " we d d dad ",
+        843.8603644371033
+      ],
+      [
+        " we dud dad ",
+        843.8068650960922
+      ],
+      [
+        " we adad dad ",
+        843.795651435852
+      ],
+      [
+        " we d dad dad ",
+        843.7763584852219
+      ],
+      [
+        " we ad dad ",
+        843.765157699585
+      ],
+      [
+        " we d ad ",
+        843.7648983001709
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "then there was silence then a sigh and the sound of light moving feet on the gravel",
+    "pred_text_argmax": "we n tde ad",
+    "pred_text_beam_search": [
+      [
+        " we n tde ad ",
+        968.4651571512222
+      ],
+      [
+        " we n tde dad ",
+        968.430758357048
+      ],
+      [
+        " we n tde ad ",
+        968.4066154956818
+      ],
+      [
+        " we tde ad ",
+        968.3878756761551
+      ],
+      [
+        " we o tde ad ",
+        968.3829827308655
+      ],
+      [
+        " we n tde dad ",
+        968.3722167015076
+      ],
+      [
+        " we no tde ad ",
+        968.3587079048157
+      ],
+      [
+        " we tde dad ",
+        968.3534768819809
+      ],
+      [
+        " we o tde dad ",
+        968.3485839366913
+      ],
+      [
+        " we n td de ad ",
+        968.330001950264
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "here is something different rounded like a nut shell you can split off one side and behold there is the nut lying snugly as does any chestnut in its bur",
+    "pred_text_argmax": "wed d d and d ad d dad",
+    "pred_text_beam_search": [
+      [
+        " wed d d and d ad d dad ",
+        2725.8256652355194
+      ],
+      [
+        " wed d d and d ad nd dad ",
+        2725.8206104040146
+      ],
+      [
+        " wed d d and d ad d dad ",
+        2725.8184393644333
+      ],
+      [
+        " wed d d and d ad nd dad ",
+        2725.8133845329285
+      ],
+      [
+        " wed d d and d d ad d dad ",
+        2725.79266500473
+      ],
+      [
+        " wed d d and d d ad nd dad ",
+        2725.7876101732254
+      ],
+      [
+        " wed d d and d d ad d dad ",
+        2725.785439133644
+      ],
+      [
+        " wed d d and d ad d dad ",
+        2725.781244635582
+      ],
+      [
+        " wed d d and d d ad nd dad ",
+        2725.7803843021393
+      ],
+      [
+        " wed d d and d ad nd dad ",
+        2725.776189804077
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "just thrust and parry and victory to the stronger",
+    "pred_text_argmax": "wed d ad d d ad",
+    "pred_text_beam_search": [
+      [
+        " wed d ad d d ad ",
+        820.0378518104553
+      ],
+      [
+        " wed d ad d d ad ",
+        820.0012695789337
+      ],
+      [
+        " wed d ad d d ad ",
+        819.966487288475
+      ],
+      [
+        " wed d ad nd d ad ",
+        819.9628868103027
+      ],
+      [
+        " wed d ad d d ad ",
+        819.9299050569534
+      ],
+      [
+        " wed d ad nd d ad ",
+        819.9263045787811
+      ],
+      [
+        " wed d and d d ad ",
+        819.9186660051346
+      ],
+      [
+        " we d d ad d d ad ",
+        819.9153175354004
+      ],
+      [
+        " wed d ad d d ad ",
+        819.8934834003448
+      ],
+      [
+        " wed d ad nd d ad ",
+        819.8915222883224
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "with this exception gwynplaine's laugh was everlasting",
+    "pred_text_argmax": "we e u e tad",
+    "pred_text_beam_search": [
+      [
+        " we e u e tad ",
+        975.646577000618
+      ],
+      [
+        " we e u tad ",
+        975.6461993455887
+      ],
+      [
+        " we u e tad ",
+        975.6109691858292
+      ],
+      [
+        " we u tad ",
+        975.6105915307999
+      ],
+      [
+        " we e e tad ",
+        975.5904711484909
+      ],
+      [
+        " we e tad ",
+        975.5900934934616
+      ],
+      [
+        " we e u e ad ",
+        975.5597718954086
+      ],
+      [
+        " we e u ad ",
+        975.5593942403793
+      ],
+      [
+        " we e tad ",
+        975.5548633337021
+      ],
+      [
+        " we tad ",
+        975.5544856786728
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "he put on his hat and looked around for his umbrella",
+    "pred_text_argmax": "we ei tad",
+    "pred_text_beam_search": [
+      [
+        " we ei tad ",
+        548.7077419757843
+      ],
+      [
+        " we ei tad ",
+        548.6984363794327
+      ],
+      [
+        " we e tad ",
+        548.5863898992538
+      ],
+      [
+        " we e tad ",
+        548.5770843029022
+      ],
+      [
+        " we i tad ",
+        548.5743117332458
+      ],
+      [
+        " we ei tad ",
+        548.572145819664
+      ],
+      [
+        " we i tad ",
+        548.5650061368942
+      ],
+      [
+        " we ei tad ",
+        548.5628402233124
+      ],
+      [
+        " wed ei tad ",
+        548.5329991579056
+      ],
+      [
+        " we ei etad ",
+        548.5283217430115
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "for these read fibi and vinos that we may conform to english pronunciation",
+    "pred_text_argmax": "we t ad",
+    "pred_text_beam_search": [
+      [
+        " we t ad ",
+        1095.8079361915588
+      ],
+      [
+        " we e t ad ",
+        1095.769853234291
+      ],
+      [
+        " we tad ",
+        1095.7673988342285
+      ],
+      [
+        " we e tad ",
+        1095.7293158769608
+      ],
+      [
+        " we t ad ",
+        1095.724764585495
+      ],
+      [
+        " we t ad ",
+        1095.7178966999054
+      ],
+      [
+        " wed t ad ",
+        1095.7137160301208
+      ],
+      [
+        " we e t ad ",
+        1095.6866816282272
+      ],
+      [
+        " we tad ",
+        1095.6842272281647
+      ],
+      [
+        " we e t ad ",
+        1095.6798137426376
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "in the last communication which he had received from lady milborough she had scolded him in terms that were for her severe because he had not returned to his wife and taken her off with him to naples",
+    "pred_text_argmax": "we ed e e d ad",
+    "pred_text_beam_search": [
+      [
+        " we ed e e d ad ",
+        2086.414021372795
+      ],
+      [
+        " we d e e d ad ",
+        2086.3938814401627
+      ],
+      [
+        " we ed de e d ad ",
+        2086.3846724033356
+      ],
+      [
+        " we e e e d ad ",
+        2086.3686438798904
+      ],
+      [
+        " we d de e d ad ",
+        2086.364532470703
+      ],
+      [
+        " we e e d ad ",
+        2086.348503947258
+      ],
+      [
+        " we e de e d ad ",
+        2086.339294910431
+      ],
+      [
+        " we ed e e d ad ",
+        2086.3345955610275
+      ],
+      [
+        " we ed e e d tad ",
+        2086.327189564705
+      ],
+      [
+        " we de e d ad ",
+        2086.3191549777985
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "he was mounted upon a powerful horse and had on a coat of mail with four of the pistols they call petronels in that country at his waist",
+    "pred_text_argmax": "we u tad",
+    "pred_text_beam_search": [
+      [
+        " we u tad ",
+        1748.300505399704
+      ],
+      [
+        " wet u tad ",
+        1748.287796497345
+      ],
+      [
+        " we u tad ",
+        1748.259978890419
+      ],
+      [
+        " we u o tad ",
+        1748.2515273094177
+      ],
+      [
+        " wet u tad ",
+        1748.24726998806
+      ],
+      [
+        " wet u o tad ",
+        1748.2388184070587
+      ],
+      [
+        " we u ad ",
+        1748.2315183877945
+      ],
+      [
+        " wet u ad ",
+        1748.2188094854355
+      ],
+      [
+        " we u o tad ",
+        1748.2176682949066
+      ],
+      [
+        " we u o tad ",
+        1748.2110008001328
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "then bozzle came forward and introduced his wife",
+    "pred_text_argmax": "we tad",
+    "pred_text_beam_search": [
+      [
+        " we tad ",
+        625.6321501731873
+      ],
+      [
+        " wed tad ",
+        625.6127014160156
+      ],
+      [
+        " we ad ",
+        625.5442731380463
+      ],
+      [
+        " wed ad ",
+        625.5248243808746
+      ],
+      [
+        " we dtad ",
+        625.2963092327118
+      ],
+      [
+        " wed dtad ",
+        625.2768604755402
+      ],
+      [
+        " we dad ",
+        625.2084321975708
+      ],
+      [
+        " wed dad ",
+        625.1889834403992
+      ],
+      [
+        " we otad ",
+        625.178471326828
+      ],
+      [
+        " wed otad ",
+        625.1590225696564
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "much luck may you have",
+    "pred_text_argmax": "we d oad",
+    "pred_text_beam_search": [
+      [
+        " we d oad ",
+        412.8363815546036
+      ],
+      [
+        " we d otad ",
+        412.5646598339081
+      ],
+      [
+        " we d odad ",
+        412.4949246644974
+      ],
+      [
+        " we d toad ",
+        412.47937512397766
+      ],
+      [
+        " we d doad ",
+        412.47847080230713
+      ],
+      [
+        " we d ad ",
+        412.4695689678192
+      ],
+      [
+        " we d ouad ",
+        412.45688676834106
+      ],
+      [
+        " we d ocad ",
+        412.448065161705
+      ],
+      [
+        " we d omad ",
+        412.44594740867615
+      ],
+      [
+        " we d onad ",
+        412.4430400133133
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "for when i was a little girl we always had logs of wood blazing in an open fireplace and so did many other people and coal was just coming into use for fuel",
+    "pred_text_argmax": "we d d ad ad d ad d dadad",
+    "pred_text_beam_search": [
+      [
+        " we d d ad ad d ad d dadad ",
+        2697.2340549230576
+      ],
+      [
+        " we d d ad ad d d ad d dadad ",
+        2697.225957751274
+      ],
+      [
+        " we d d ad d d ad d dadad ",
+        2697.2124963998795
+      ],
+      [
+        " we d d ad d d d ad d dadad ",
+        2697.204399228096
+      ],
+      [
+        " we d d ad nd d ad d dadad ",
+        2697.197200655937
+      ],
+      [
+        " we d d ad nd d d ad d dadad ",
+        2697.1891034841537
+      ],
+      [
+        " we d d ad ad d d ad d dadad ",
+        2697.180514216423
+      ],
+      [
+        " we d d ad ad d and d dadad ",
+        2697.180159330368
+      ],
+      [
+        " we d d and ad d ad d dadad ",
+        2697.177373290062
+      ],
+      [
+        " we d d ad ad d d and d dadad ",
+        2697.1720621585846
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "the most gifted individuals in the land emulated each other in proving which entertained for him the most sincere affection",
+    "pred_text_argmax": "we o u tad",
+    "pred_text_beam_search": [
+      [
+        " we o u tad ",
+        1372.3056980371475
+      ],
+      [
+        " we o tad ",
+        1372.2901220321655
+      ],
+      [
+        " we o u d tad ",
+        1372.2855533361435
+      ],
+      [
+        " we o ue tad ",
+        1372.2791068553925
+      ],
+      [
+        " we o d tad ",
+        1372.2699773311615
+      ],
+      [
+        " we o e tad ",
+        1372.2635308504105
+      ],
+      [
+        " we o ue d tad ",
+        1372.2589621543884
+      ],
+      [
+        " we u tad ",
+        1372.2564228773117
+      ],
+      [
+        " we o e d tad ",
+        1372.2433861494064
+      ],
+      [
+        " we tad ",
+        1372.2408468723297
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "my own regiment was in the advance",
+    "pred_text_argmax": "we e ad",
+    "pred_text_beam_search": [
+      [
+        " we e ad ",
+        516.0795474052429
+      ],
+      [
+        " we e ad ",
+        516.0083379745483
+      ],
+      [
+        " we e ead ",
+        515.9919520616531
+      ],
+      [
+        " we e ad ",
+        515.94160759449
+      ],
+      [
+        " we e ead ",
+        515.9207426309586
+      ],
+      [
+        " we e uad ",
+        515.880930185318
+      ],
+      [
+        " we e ad ",
+        515.8703981637955
+      ],
+      [
+        " we e e ad ",
+        515.8669823408127
+      ],
+      [
+        " we e ead ",
+        515.8540122509003
+      ],
+      [
+        " we te ad ",
+        515.8463872671127
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "it was plain that together we should manage most comfortably delightfully in fact",
+    "pred_text_argmax": "wed e t g o u t uad",
+    "pred_text_beam_search": [
+      [
+        " wed e t g o u t uad ",
+        1025.3195083141327
+      ],
+      [
+        " wed e t g o u t uad ",
+        1025.3015463352203
+      ],
+      [
+        " wed e t g o u t uad ",
+        1025.297304391861
+      ],
+      [
+        " wed e t g o u t uad ",
+        1025.2914689779282
+      ],
+      [
+        " wed t g o u t uad ",
+        1025.2913541793823
+      ],
+      [
+        " wed e t g o u ut uad ",
+        1025.2836161851883
+      ],
+      [
+        " wed e td g o u t uad ",
+        1025.2742776870728
+      ],
+      [
+        " wed e t g o u t uad ",
+        1025.2735069990158
+      ],
+      [
+        " wed t g o u t uad ",
+        1025.27339220047
+      ],
+      [
+        " wed e t g o u t uad ",
+        1025.2718328237534
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "i cannot pretend to explain why except on the supposition that romance is dead at least in that circle of society in which the snellings move",
+    "pred_text_argmax": "wed u d dad",
+    "pred_text_beam_search": [
+      [
+        " wed u d dad ",
+        1769.3443905115128
+      ],
+      [
+        " wed u d u dad ",
+        1769.342313170433
+      ],
+      [
+        " wed u ad dad ",
+        1769.3393391370773
+      ],
+      [
+        " wed u ad u dad ",
+        1769.3372617959976
+      ],
+      [
+        " wed u d dad ",
+        1769.3351150751114
+      ],
+      [
+        " wed u d u dad ",
+        1769.3330377340317
+      ],
+      [
+        " wed u ad dad ",
+        1769.330063700676
+      ],
+      [
+        " wed u ad u dad ",
+        1769.3279863595963
+      ],
+      [
+        " we u d dad ",
+        1769.3275439739227
+      ],
+      [
+        " we u d u dad ",
+        1769.325466632843
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "i thoroughly understood and appreciated the necessity for waiting before crossing the fjord for that moment when the sea at its highest point is in a state of slack water",
+    "pred_text_argmax": "we t d u tu tad",
+    "pred_text_beam_search": [
+      [
+        " we t d u tu tad ",
+        1566.3058158159256
+      ],
+      [
+        " we t d u tu tad ",
+        1566.2937108278275
+      ],
+      [
+        " we t du u tu tad ",
+        1566.247927069664
+      ],
+      [
+        " we t du u tu tad ",
+        1566.2358220815659
+      ],
+      [
+        " we t t d u tu tad ",
+        1566.1736625432968
+      ],
+      [
+        " we t t d u tu tad ",
+        1566.1615575551987
+      ],
+      [
+        " we t du tu tad ",
+        1566.1597241163254
+      ],
+      [
+        " we t du tu tad ",
+        1566.1476191282272
+      ],
+      [
+        " we t u tu tad ",
+        1566.136999487877
+      ],
+      [
+        " we t u tu tad ",
+        1566.1248944997787
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "better ring again suggested the driver hard",
+    "pred_text_argmax": "we t htad",
+    "pred_text_beam_search": [
+      [
+        " we t htad ",
+        610.7811548709869
+      ],
+      [
+        " we t uhtad ",
+        610.7402399778366
+      ],
+      [
+        " we t had ",
+        610.7344592809677
+      ],
+      [
+        " we t htad ",
+        610.7147370576859
+      ],
+      [
+        " we t ht ad ",
+        610.7133584022522
+      ],
+      [
+        " we t tad ",
+        610.7079589366913
+      ],
+      [
+        " we t atad ",
+        610.7063149213791
+      ],
+      [
+        " we t utad ",
+        610.7003972530365
+      ],
+      [
+        " we t uhad ",
+        610.6935443878174
+      ],
+      [
+        " we t gtad ",
+        610.6890996694565
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "however in spite of all she could say the elder sisters opened the door and admitted the beggar",
+    "pred_text_argmax": "we nd eud t t ad ad",
+    "pred_text_beam_search": [
+      [
+        " we nd eud t t ad ad ",
+        1212.8180454969406
+      ],
+      [
+        " we nd e ud t t ad ad ",
+        1212.81760597229
+      ],
+      [
+        " we nd eud t t ad ad ",
+        1212.8122915029526
+      ],
+      [
+        " we nd e ud t t ad ad ",
+        1212.811851978302
+      ],
+      [
+        " we nd eud t t ad ad ",
+        1212.8087972402573
+      ],
+      [
+        " we nd e ud t t ad ad ",
+        1212.8083577156067
+      ],
+      [
+        " we nd ud t t ad ad ",
+        1212.808274269104
+      ],
+      [
+        " we nd ud t t ad ad ",
+        1212.8078347444534
+      ],
+      [
+        " we nd eud t t ad ad ",
+        1212.8030432462692
+      ],
+      [
+        " we nd e ud t t ad ad ",
+        1212.8026037216187
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "now beat and strain the eggs work these up with the other ingredients and the forcemeat will be ready for use",
+    "pred_text_argmax": "we e u o tad",
+    "pred_text_beam_search": [
+      [
+        " we e u o tad ",
+        1318.7667516469955
+      ],
+      [
+        " we e u tad ",
+        1318.7526330947876
+      ],
+      [
+        " we u o tad ",
+        1318.7472163438797
+      ],
+      [
+        " we u tad ",
+        1318.7330977916718
+      ],
+      [
+        " we e u o ad ",
+        1318.7248084545135
+      ],
+      [
+        " we e u oe tad ",
+        1318.7168258428574
+      ],
+      [
+        " we e u o tad ",
+        1318.7148793935776
+      ],
+      [
+        " we e u ad ",
+        1318.7106899023056
+      ],
+      [
+        " we u o ad ",
+        1318.7052731513977
+      ],
+      [
+        " we e u e tad ",
+        1318.7027072906494
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "these they spread out on the ground using boots wrapped in coats for pillows",
+    "pred_text_argmax": "we ue u d tad",
+    "pred_text_beam_search": [
+      [
+        " we ue u d tad ",
+        742.1212288141251
+      ],
+      [
+        " we m ue u d tad ",
+        742.0466121435165
+      ],
+      [
+        " we ue u d tad ",
+        742.0100657939911
+      ],
+      [
+        " we ue d tad ",
+        742.0077364444733
+      ],
+      [
+        " we ue u d e tad ",
+        741.9600961208344
+      ],
+      [
+        " we ue ua d tad ",
+        741.9402475357056
+      ],
+      [
+        " we ue g d tad ",
+        741.93914270401
+      ],
+      [
+        " we ue h d tad ",
+        741.937155008316
+      ],
+      [
+        " we m ue u d tad ",
+        741.9354491233826
+      ],
+      [
+        " we m ue d tad ",
+        741.9331197738647
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "the distinguishing mark of the hens was a crest of lamentably scanty growth in these latter days but so oddly and wickedly analogous to hepzibah's turban that phoebe to the poignant distress of her conscience but inevitably was led to fancy a general resemblance betwixt these forlorn bipeds and her respectable relative",
+    "pred_text_argmax": "we t u ut d g nd u d d ad o ad nd d d d d u e d ad",
+    "pred_text_beam_search": [
+      [
+        " we t u ut d g nd u d d ad o ad nd d d d d u e d ad ",
+        3674.8766835927963
+      ],
+      [
+        " we t u ut d g d u d d ad o ad nd d d d d u e d ad ",
+        3674.8657557964325
+      ],
+      [
+        " we t u ut d g nd u d d ad o ad nd d d d d u e d ad ",
+        3674.861691713333
+      ],
+      [
+        " we t u ut d g d u d d ad o ad nd d d d d u e d ad ",
+        3674.8507639169693
+      ],
+      [
+        " we t u ut d g nd u d d ad ad nd d d d d u e d ad ",
+        3674.8493403196335
+      ],
+      [
+        " we t u ut d ga nd u d d ad o ad nd d d d d u e d ad ",
+        3674.8463765382767
+      ],
+      [
+        " we t u ut d g nd u d d d o ad nd d d d d u e d ad ",
+        3674.841210961342
+      ],
+      [
+        " we t u ut d g nd u d d ad o ad nd d d d u e d ad ",
+        3674.8392318487167
+      ],
+      [
+        " we u t u ut d g nd u d d ad o ad nd d d d d u e d ad ",
+        3674.8387217521667
+      ],
+      [
+        " we t u ut d g d u d d ad ad nd d d d d u e d ad ",
+        3674.8384125232697
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "he would get one to day it would probably be on his desk when he got back he would look for it at once",
+    "pred_text_argmax": "we i uad",
+    "pred_text_beam_search": [
+      [
+        " we i uad ",
+        1145.6995329856873
+      ],
+      [
+        " we i uad ",
+        1145.6980559825897
+      ],
+      [
+        " we i u uad ",
+        1145.6006286144257
+      ],
+      [
+        " we i u uad ",
+        1145.5991516113281
+      ],
+      [
+        " we i s uad ",
+        1145.5920321941376
+      ],
+      [
+        " we i s uad ",
+        1145.59055519104
+      ],
+      [
+        " we it uad ",
+        1145.5764952898026
+      ],
+      [
+        " we it uad ",
+        1145.575018286705
+      ],
+      [
+        " we i uad ",
+        1145.5734630823135
+      ],
+      [
+        " we i uad ",
+        1145.571986079216
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "then she saw david and the regiment became one man to her",
+    "pred_text_argmax": "we tad",
+    "pred_text_beam_search": [
+      [
+        " we tad ",
+        715.2122262716293
+      ],
+      [
+        " we tad ",
+        715.1546007394791
+      ],
+      [
+        " we tad ",
+        715.1072134971619
+      ],
+      [
+        " we tad ",
+        715.0356668233871
+      ],
+      [
+        " we tad ",
+        714.8882900476456
+      ],
+      [
+        " we utad ",
+        714.8501927852631
+      ],
+      [
+        " we utad ",
+        714.7925672531128
+      ],
+      [
+        " we e tad ",
+        714.7741914987564
+      ],
+      [
+        " we l tad ",
+        714.757178068161
+      ],
+      [
+        " we utad ",
+        714.7451800107956
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "at the same time every avenue of the throne was assaulted with gold",
+    "pred_text_argmax": "we e t etad",
+    "pred_text_beam_search": [
+      [
+        " we e t etad ",
+        790.030240893364
+      ],
+      [
+        " we e tu etad ",
+        790.0276786088943
+      ],
+      [
+        " we e t etad ",
+        790.0133274793625
+      ],
+      [
+        " we e tu etad ",
+        790.0107651948929
+      ],
+      [
+        " we s e t etad ",
+        790.0019203424454
+      ],
+      [
+        " we s e tu etad ",
+        789.9993580579758
+      ],
+      [
+        " we s e t etad ",
+        789.9850069284439
+      ],
+      [
+        " we s e tu etad ",
+        789.9824446439743
+      ],
+      [
+        " we e t etad ",
+        789.9660557508469
+      ],
+      [
+        " we e tu etad ",
+        789.9634934663773
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "only unfortunately his own work never does get good",
+    "pred_text_argmax": "weu u udad",
+    "pred_text_beam_search": [
+      [
+        " weu u udad ",
+        1031.9661793708801
+      ],
+      [
+        " weu u uad ",
+        1031.900081038475
+      ],
+      [
+        " weu d u udad ",
+        1031.8695061206818
+      ],
+      [
+        " we u u udad ",
+        1031.8444890975952
+      ],
+      [
+        " weu d u uad ",
+        1031.8034077882767
+      ],
+      [
+        " we u u uad ",
+        1031.7783907651901
+      ],
+      [
+        " we u d u udad ",
+        1031.7478158473969
+      ],
+      [
+        " weu u udad ",
+        1031.7000368833542
+      ],
+      [
+        " we u d u uad ",
+        1031.6817175149918
+      ],
+      [
+        " weu u uad ",
+        1031.633938550949
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "he felt the difference as soon as he reached the hills of his native state",
+    "pred_text_argmax": "we d ad",
+    "pred_text_beam_search": [
+      [
+        " we d ad ",
+        713.8690767288208
+      ],
+      [
+        " we d ad ",
+        713.7505614757538
+      ],
+      [
+        " we n d ad ",
+        713.6048731803894
+      ],
+      [
+        " we t d ad ",
+        713.6035183668137
+      ],
+      [
+        " we a d ad ",
+        713.5886400938034
+      ],
+      [
+        " we d ad ",
+        713.5820989608765
+      ],
+      [
+        " we o d ad ",
+        713.5762580633163
+      ],
+      [
+        " we d d ad ",
+        713.5730067491531
+      ],
+      [
+        " we h d ad ",
+        713.5368361473083
+      ],
+      [
+        " we g d ad ",
+        713.5311611890793
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "they were all taken aback and not one of them dared to utter a word such deference did they pay him",
+    "pred_text_argmax": "we d u d ad",
+    "pred_text_beam_search": [
+      [
+        " we d u d ad ",
+        1292.3875612020493
+      ],
+      [
+        " we d u d ad ",
+        1292.3805428743362
+      ],
+      [
+        " we d u ad ",
+        1292.3014920949936
+      ],
+      [
+        " we d u ad ",
+        1292.2944737672806
+      ],
+      [
+        " we u d u d ad ",
+        1292.2006652355194
+      ],
+      [
+        " we u d u d ad ",
+        1292.1936469078064
+      ],
+      [
+        " we d u d ad ",
+        1292.137549161911
+      ],
+      [
+        " we d u d ad ",
+        1292.1340200901031
+      ],
+      [
+        " we d u d ad ",
+        1292.130530834198
+      ],
+      [
+        " we d u d ad ",
+        1292.1270017623901
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "pour mayonnaise over all chill and serve",
+    "pred_text_argmax": "we ad",
+    "pred_text_beam_search": [
+      [
+        " we ad ",
+        664.7324330806732
+      ],
+      [
+        " we tad ",
+        664.7035105228424
+      ],
+      [
+        " we ad ",
+        664.7023199796677
+      ],
+      [
+        " we tad ",
+        664.6733974218369
+      ],
+      [
+        " wed ad ",
+        664.6233454942703
+      ],
+      [
+        " wed tad ",
+        664.5944229364395
+      ],
+      [
+        " wed ad ",
+        664.5932323932648
+      ],
+      [
+        " wed tad ",
+        664.564309835434
+      ],
+      [
+        " we ad ",
+        664.5268477201462
+      ],
+      [
+        " we tad ",
+        664.4979251623154
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "but the faces of the men were rosy and the goblets by them had a few drops of wine left",
+    "pred_text_argmax": "we d d e ad",
+    "pred_text_beam_search": [
+      [
+        " we d d e ad ",
+        1277.666936635971
+      ],
+      [
+        " we d d e ad ",
+        1277.6586282253265
+      ],
+      [
+        " we d d e ad ",
+        1277.6375284194946
+      ],
+      [
+        " we d d e ad ",
+        1277.62922000885
+      ],
+      [
+        " we d e ad ",
+        1277.5914912223816
+      ],
+      [
+        " we d e ad ",
+        1277.583182811737
+      ],
+      [
+        " we d e ad ",
+        1277.5620830059052
+      ],
+      [
+        " we d d e ad ",
+        1277.4959654808044
+      ],
+      [
+        " we d d e ad ",
+        1277.48765707016
+      ],
+      [
+        " we d du e ad ",
+        1277.4785771369934
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "we had beef for supper that night",
+    "pred_text_argmax": "we u dauad",
+    "pred_text_beam_search": [
+      [
+        " we u dauad ",
+        488.0389623641968
+      ],
+      [
+        " we u duad ",
+        488.02661764621735
+      ],
+      [
+        " we u dad ",
+        487.9734081029892
+      ],
+      [
+        " we u duad ",
+        487.96106338500977
+      ],
+      [
+        " wed u dauad ",
+        487.93118143081665
+      ],
+      [
+        " wed u duad ",
+        487.9188367128372
+      ],
+      [
+        " we u dauad ",
+        487.91480123996735
+      ],
+      [
+        " we u dad ",
+        487.9137568473816
+      ],
+      [
+        " we u duad ",
+        487.9024565219879
+      ],
+      [
+        " we uh dauad ",
+        487.8906877040863
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "but in this awful moment of the danger of the church their vow was superseded by a more sublime and indispensable duty",
+    "pred_text_argmax": "we o e e t e tad",
+    "pred_text_beam_search": [
+      [
+        " we o e e t e tad ",
+        1305.1847869157791
+      ],
+      [
+        " we o e e e tad ",
+        1305.12972509861
+      ],
+      [
+        " we o e e t e tad ",
+        1305.1078394651413
+      ],
+      [
+        " we o e e t e tad ",
+        1305.0782825946808
+      ],
+      [
+        " we o e e e tad ",
+        1305.052777647972
+      ],
+      [
+        " we o e e t e t tad ",
+        1305.0497012138367
+      ],
+      [
+        " we o e e t g e tad ",
+        1305.0469834804535
+      ],
+      [
+        " we e e t e tad ",
+        1305.0385950803757
+      ],
+      [
+        " we o e e t i e tad ",
+        1305.0296666622162
+      ],
+      [
+        " we o e e e tad ",
+        1305.0232207775116
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "you see that she knew exactly how a tryst is conducted in the pages of the standard poets and of the cheaper weekly journals",
+    "pred_text_argmax": "wed id ad ad d d ad",
+    "pred_text_beam_search": [
+      [
+        " wed id ad ad d d ad ",
+        1426.555979847908
+      ],
+      [
+        " wed d ad ad d d ad ",
+        1426.5500050783157
+      ],
+      [
+        " wed id ad ad d d ad ",
+        1426.5419535636902
+      ],
+      [
+        " wed id d ad d d ad ",
+        1426.5367361307144
+      ],
+      [
+        " wed d ad ad d d ad ",
+        1426.535978794098
+      ],
+      [
+        " wed d d ad d d ad ",
+        1426.5307613611221
+      ],
+      [
+        " wed id d ad d d ad ",
+        1426.5227098464966
+      ],
+      [
+        " wed d d ad d d ad ",
+        1426.5167350769043
+      ],
+      [
+        " wed id ad a d d ad ",
+        1426.5131570100784
+      ],
+      [
+        " wed id ud ad d d ad ",
+        1426.5121766328812
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "never fear you shall see him again to morrow",
+    "pred_text_argmax": "we ad",
+    "pred_text_beam_search": [
+      [
+        " we ad ",
+        686.7611093521118
+      ],
+      [
+        " we ad ",
+        686.6056761741638
+      ],
+      [
+        " wed ad ",
+        686.5218737125397
+      ],
+      [
+        " we u ad ",
+        686.3669496774673
+      ],
+      [
+        " wed ad ",
+        686.3664405345917
+      ],
+      [
+        " we tad ",
+        686.3392711877823
+      ],
+      [
+        " we t ad ",
+        686.2712386846542
+      ],
+      [
+        " we ad ",
+        686.2163388729095
+      ],
+      [
+        " we u ad ",
+        686.2115164995193
+      ],
+      [
+        " we tad ",
+        686.1838380098343
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "preface to second edition",
+    "pred_text_argmax": "wed du dad",
+    "pred_text_beam_search": [
+      [
+        " wed du dad ",
+        479.4157257080078
+      ],
+      [
+        " wed du dad ",
+        479.3740165233612
+      ],
+      [
+        " wed du d ad ",
+        479.2448971271515
+      ],
+      [
+        " wed u dad ",
+        479.2268099784851
+      ],
+      [
+        " wed du d dad ",
+        479.2031879425049
+      ],
+      [
+        " wed u dad ",
+        479.1851007938385
+      ],
+      [
+        " wed d dad ",
+        479.1612957715988
+      ],
+      [
+        " wedu du dad ",
+        479.15691328048706
+      ],
+      [
+        " we du dad ",
+        479.1448664665222
+      ],
+      [
+        " wed d dad ",
+        479.1195865869522
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "as i went back to the field hospital i overtook another man walking along",
+    "pred_text_argmax": "we d ad",
+    "pred_text_beam_search": [
+      [
+        " we d ad ",
+        919.7418905496597
+      ],
+      [
+        " we d d ad ",
+        919.7358993291855
+      ],
+      [
+        " we d ad ",
+        919.7326935529709
+      ],
+      [
+        " we d d ad ",
+        919.7267023324966
+      ],
+      [
+        " we e d ad ",
+        919.7251764535904
+      ],
+      [
+        " we e d d ad ",
+        919.7191852331161
+      ],
+      [
+        " we e d ad ",
+        919.7159794569016
+      ],
+      [
+        " we e d d ad ",
+        919.7099882364273
+      ],
+      [
+        " we a d ad ",
+        919.6910057067871
+      ],
+      [
+        " we a d d ad ",
+        919.6850144863129
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "look tony that's his poison i said",
+    "pred_text_argmax": "we d e uad",
+    "pred_text_beam_search": [
+      [
+        " we d e uad ",
+        674.0211114883423
+      ],
+      [
+        " we d e uad ",
+        673.9354162216187
+      ],
+      [
+        " we d e t uad ",
+        673.9265289306641
+      ],
+      [
+        " we d e o uad ",
+        673.9156935214996
+      ],
+      [
+        " we d e iuad ",
+        673.8871153593063
+      ],
+      [
+        " we d e uiad ",
+        673.8850121498108
+      ],
+      [
+        " we d e iad ",
+        673.8765296936035
+      ],
+      [
+        " we d e uad ",
+        673.8747885227203
+      ],
+      [
+        " we d e ad ",
+        673.8412816524506
+      ],
+      [
+        " we d e tuad ",
+        673.8408336639404
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "no doubt many predictions have been colored to suit the new age and unquestionably false prophets fakirs and conjurers have become the pest of the tribes during the transition period",
+    "pred_text_argmax": "wed o ad",
+    "pred_text_beam_search": [
+      [
+        " wed o ad ",
+        1975.635365486145
+      ],
+      [
+        " we o ad ",
+        1975.6251888275146
+      ],
+      [
+        " wed o ad ",
+        1975.6194741725922
+      ],
+      [
+        " we o ad ",
+        1975.6092975139618
+      ],
+      [
+        " wed o ad ",
+        1975.6025482416153
+      ],
+      [
+        " we o ad ",
+        1975.592371582985
+      ],
+      [
+        " wed o ad ",
+        1975.558564066887
+      ],
+      [
+        " we o ad ",
+        1975.5483874082565
+      ],
+      [
+        " wed o ad ",
+        1975.542672753334
+      ],
+      [
+        " we o ad ",
+        1975.5324960947037
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "inside a secret rocket telemetering device was mounted on its test stand",
+    "pred_text_argmax": "we d d ad",
+    "pred_text_beam_search": [
+      [
+        " we d d ad ",
+        1024.4638825654984
+      ],
+      [
+        " we d ad ",
+        1024.4631927013397
+      ],
+      [
+        " we d d d ad ",
+        1024.4431669712067
+      ],
+      [
+        " we d d ad ",
+        1024.442477107048
+      ],
+      [
+        " we d u d ad ",
+        1024.4317436218262
+      ],
+      [
+        " we u d ad ",
+        1024.4310537576675
+      ],
+      [
+        " we nd d ad ",
+        1024.4302370548248
+      ],
+      [
+        " we d a d ad ",
+        1024.4295946359634
+      ],
+      [
+        " we n d ad ",
+        1024.4295471906662
+      ],
+      [
+        " we a d ad ",
+        1024.4289047718048
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "i will trouble you no further",
+    "pred_text_argmax": "wed ad",
+    "pred_text_beam_search": [
+      [
+        " wed ad ",
+        545.5885195732117
+      ],
+      [
+        " wed ad ",
+        545.5609158277512
+      ],
+      [
+        " we d ad ",
+        545.4144351482391
+      ],
+      [
+        " we d ad ",
+        545.3868314027786
+      ],
+      [
+        " we ad ",
+        545.3866387605667
+      ],
+      [
+        " wed i ad ",
+        545.3798794746399
+      ],
+      [
+        " we ad ",
+        545.3590350151062
+      ],
+      [
+        " wedi ad ",
+        545.3522757291794
+      ],
+      [
+        " wed a ad ",
+        545.2501403093338
+      ],
+      [
+        " wed o ad ",
+        545.2300841808319
+      ]
+    ]
+  },
+  {
     "ground_trurh": "we did not it must have come to life some time during the night and dug its way out laughed tad",
     "pred_text_argmax": "we di not it must have come to life some time during the night and dug its way out laughe tad",
     "pred_text_beam_search": [
       [
-        "we di not it must have come to life some time during the night and dug its way out laughe tadd",
-        2.1915549236473097e-11
+        " we di not it must have come to life some time during the night and dug its way out laughe tad ",
+        1027.696986913681
       ],
       [
-        "we did not it must have come to life some time during the night and dug its way out laughe tadd",
-        2.063823591191838e-11
+        " we d not it must have come to life some time during the night and dug its way out laughe tad ",
+        1027.410513162613
       ],
       [
-        "we di not it must have come to life some time during the night and dug its way out laughed tadd",
-        1.909251229337272e-11
+        " we di not it ust have come to life some time during the night and dug its way out laughe tad ",
+        1027.384816646576
       ],
       [
-        "we did not it must have come to life some time during the night and dug its way out laughed tadd",
-        1.7977019178827547e-11
+        " we di not it must have come to life some time during the night and dug its wa out laughe tad ",
+        1027.3036541938782
       ],
       [
-        "we didd not it must have come to life some time during the night and dug its way out laughe tadd",
-        7.21067086248417e-12
+        " we di not it must have come to life some time duringh the night and dug its way out laughe tad ",
+        1027.2363498210907
       ],
       [
-        "we dii not it must have come to life some time during the night and dug its way out laughe tadd",
-        6.866977472763658e-12
+        " we di not it must have come to life some time duringt the night and dug its way out laughe tad ",
+        1027.23395550251
       ],
       [
-        "we didd not it must have come to life some time during the night and dug its way out laughed tadd",
-        6.1662472003454205e-12
+        " we di not it must have come to life some time durings the night and dug its way out laughe tad ",
+        1027.2334226369858
       ],
       [
-        "we di not it must have come to life some time during the night and dug its way out laughedd tadd",
-        6.035452086022852e-12
+        " we di not it must have come to life some time duringn the night and dug its way out laughe tad ",
+        1027.2318786382675
       ],
       [
-        "we di not it must have come to life some time during the night and dug its way out llaughe tadd",
-        6.020132309325632e-12
+        " we di not it must have come to life some time duringi the night and dug its way out laughe tad ",
+        1027.231452345848
       ],
       [
-        "we dii not it must have come to life some time during the night and dug its way out laughed tadd",
-        5.872336904938491e-12
+        " we di not it must have come to life some time duringe the night and dug its way out laughe tad ",
+        1027.2312074899673
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "they have known me much longer but never honor me with any familiarity though hardly a day passes without my bringing them food",
+    "pred_text_argmax": "we u d d d d ad",
+    "pred_text_beam_search": [
+      [
+        " we u d d d d ad ",
+        1561.286725640297
+      ],
+      [
+        " we u d d d d ad ",
+        1561.2708277702332
+      ],
+      [
+        " we u d d d d d ad ",
+        1561.2222236394882
+      ],
+      [
+        " we u d d d d d ad ",
+        1561.2063257694244
+      ],
+      [
+        " we u d d d u d ad ",
+        1561.206150650978
+      ],
+      [
+        " we u d d d d ad ",
+        1561.2012515068054
+      ],
+      [
+        " we u d d d u d ad ",
+        1561.1902527809143
+      ],
+      [
+        " we u d d d d ad ",
+        1561.1853536367416
+      ],
+      [
+        " we u d d d d ad ",
+        1561.164921760559
+      ],
+      [
+        " we u d d d d ad ",
+        1561.161104798317
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "he certainly possesses talents beyond the rude sphere in which he moves and being neither destitute of ambition nor encumbered with scruples he will probably attempt by every means to distinguish himself during the period of these unhappy commotions",
+    "pred_text_argmax": "we e o d u e t t e ad",
+    "pred_text_beam_search": [
+      [
+        " we e o d u e t t e ad ",
+        2855.6831352710724
+      ],
+      [
+        " we e o d u e t t e ad ",
+        2855.6768255233765
+      ],
+      [
+        " we e o u e t t e ad ",
+        2855.675089240074
+      ],
+      [
+        " wed e o d u e t t e ad ",
+        2855.6745176315308
+      ],
+      [
+        " we h e o d u e t t e ad ",
+        2855.6718471050262
+      ],
+      [
+        " we e o d u e a t e ad ",
+        2855.6715434789658
+      ],
+      [
+        " we e o u e t t e ad ",
+        2855.6687794923782
+      ],
+      [
+        " wed e o d u e t t e ad ",
+        2855.668207883835
+      ],
+      [
+        " wed e o u e t t e ad ",
+        2855.6664716005325
+      ],
+      [
+        " we he o d u e t t e ad ",
+        2855.6655373573303
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "alexander exclaimed mildly",
+    "pred_text_argmax": "we dtad",
+    "pred_text_beam_search": [
+      [
+        " we dtad ",
+        448.29194819927216
+      ],
+      [
+        " we dad ",
+        448.29188764095306
+      ],
+      [
+        " we dtad ",
+        448.2791414260864
+      ],
+      [
+        " we dad ",
+        448.27908086776733
+      ],
+      [
+        " wed dtad ",
+        448.0609838962555
+      ],
+      [
+        " wed dad ",
+        448.0609233379364
+      ],
+      [
+        " wed dtad ",
+        448.04817712306976
+      ],
+      [
+        " wed dad ",
+        448.04811656475067
+      ],
+      [
+        " we u dtad ",
+        447.93201100826263
+      ],
+      [
+        " we u dad ",
+        447.93195044994354
+      ]
+    ]
+  },
+  {
+    "ground_trurh": "hold on to me miss nancy said the giant i'm big enough to carry double",
+    "pred_text_argmax": "we ad",
+    "pred_text_beam_search": [
+      [
+        " we ad ",
+        999.3344628810883
+      ],
+      [
+        " wed ad ",
+        999.3190252780914
+      ],
+      [
+        " we ad ",
+        999.2971289157867
+      ],
+      [
+        " we t ad ",
+        999.2817525863647
+      ],
+      [
+        " wed ad ",
+        999.2816913127899
+      ],
+      [
+        " wed t ad ",
+        999.2663149833679
+      ],
+      [
+        " we t ad ",
+        999.2444186210632
+      ],
+      [
+        " wed t ad ",
+        999.2289810180664
+      ],
+      [
+        " we u ad ",
+        999.1191027164459
+      ],
+      [
+        " we ad ",
+        999.1139658689499
       ]
     ]
   }

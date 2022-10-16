@@ -76,10 +76,10 @@ def main(config, out_file, eval=False):
                      "pred_text_argmax": text_encoder.ctc_decode(
                          argmax.cpu().numpy()),
                      "pred_text_beam_search": text_encoder.
-                     ctc_beam_search(
-                         batch["probs"][i],
+                     ctc_beam_search_pt(
+                         batch["probs"][i].exp().detach().cpu(),
                          batch["log_probs_length"][i],
-                         beam_size=100)[: 10], })
+                         beam_size=1500)[: 10], })
 
             for sample in results:
                 cers_argmax.append(
