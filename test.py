@@ -64,7 +64,7 @@ def main(config, out_file, eval=False, beam_size=100, beam_search_type='torch'):
             batch["log_probs_length"] = model.transform_input_lengths(
                 batch["spectrogram_length"]
             )
-            batch["probs"] = batch["log_probs"].exp().cpu()
+            batch["probs"] = batch["log_probs"].exp().detach().cpu()
             batch["argmax"] = batch["probs"].argmax(-1)
 
             if beam_search_type == 'torch':
@@ -85,7 +85,7 @@ def main(config, out_file, eval=False, beam_size=100, beam_search_type='torch'):
                      "pred_text_argmax": text_encoder.ctc_decode(
                          argmax.cpu().numpy()),
                      "pred_text_beam_search": encoder(
-                         batch["probs"][i].exp().detach().cpu(),
+                         batch["probs"][i],
                          batch["log_probs_length"][i],
                          beam_size=beam_size)[: 10], })
             if eval:
