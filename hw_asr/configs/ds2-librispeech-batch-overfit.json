@@ -50,7 +50,7 @@
     "type": "DeepSpeech",
     "args": {
       "n_feats": 32,
-      "gru_hidden": 1400,
+      "gru_hidden": 1500,
       "n_gru": 3,
       "conv_channels": 32,
       "dropout": 0.1

@@ -24,7 +24,6 @@ class CTCCharTextEncoder(CharTextEncoder):
         self.vocab = [self.EMPTY_TOK] + list(self.alphabet)
         self.ind2char = dict(enumerate(self.vocab))
         self.char2ind = {v: k for k, v in self.ind2char.items()}
-        # self.files = download_pretrained_files("librispeech-4-gram")
 
     def ctc_decode(self, inds: List[int]) -> str:
         last_char = self.EMPTY_TOK
@@ -59,9 +58,7 @@ class CTCCharTextEncoder(CharTextEncoder):
 
     def ctc_beam_search_pt(self, probs: torch.tensor, probs_length,
                            beam_size: int = 100) -> List[Hypothesis]:
-        LM_WEIGHT = 3.23
-        WORD_SCORE = -0.26
-        # print(self.files.tokens)
+
         decoder = ctc_decoder(
             tokens=self.vocab,
             beam_size=beam_size,

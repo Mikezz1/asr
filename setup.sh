@@ -9,3 +9,4 @@ mkdir final_model
 
 mv model_best-6.pth final_model
 cp hw_asr/configs/ds2-librispeech-train.json final_model
+mv final_model/ds2-librispeech-train.json  final_model/config.json
