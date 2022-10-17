@@ -27,16 +27,19 @@ the workflow.
 
 ## Before submitting
 
-0) Make sure your projects run on a new machine after complemeting the installation guide or by 
+0) Make sure your projects run on a new machine after complemeting the installation guide or by
    running it in docker container.
 1) Search project for `# TODO: your code here` and implement missing functionality
 2) Make sure all tests work without errors
+
    ```shell
    python -m unittest discover hw_asr/tests
    ```
+
 3) Make sure `test.py` works fine and works as expected. You should create files `default_test_config.json` and your
    installation guide should download your model checpoint and configs in `default_test_model/checkpoint.pth`
    and `default_test_model/config.json`.
+
    ```shell
    python test.py \
       -c default_test_config.json \
@@ -44,6 +47,7 @@ the workflow.
       -t test_data \
       -o test_result.json
    ```
+
 4) Use `train.py` for training
 
 ## Credits
@@ -55,14 +59,14 @@ of [pytorch-template](https://github.com/victoresque/pytorch-template) repositor
 
 You can use this project with docker. Quick start:
 
-```bash 
+```bash
 docker build -t my_hw_asr_image . 
 docker run \
    --gpus '"device=0"' \
    -it --rm \
    -v /path/to/local/storage/dir:/repos/asr_project_template/data/datasets \
    -e WANDB_API_KEY=<your_wandb_api_key> \
-	my_hw_asr_image python -m unittest 
+ my_hw_asr_image python -m unittest 
 ```
 
 Notes:
@@ -70,7 +74,7 @@ Notes:
 * `-v /out/of/container/path:/inside/container/path` -- bind mount a path, so you wouldn't have to download datasets at
   the start of every docker run.
 * `-e WANDB_API_KEY=<your_wandb_api_key>` -- set envvar for wandb (if you want to use it). You can find your API key
-  here: https://wandb.ai/authorize
+  here: <https://wandb.ai/authorize>
 
 ## TODO
 
@@ -80,3 +84,34 @@ functionality. Current demands:
 * Tests for beam search
 * README section to describe folders
 * Notebook to show how to work with `ConfigParser` and `config_parser.init_obj(...)`
+
+# ASR Homework
+
+#### Deep Learning for Audio, HSE
+
+## About
+
+This repo contains DeepSpeech2-like model implementation ([link](https://arxiv.org/abs/1512.02595)), trained on 960h of transcribed audio from [Librispeech](https://www.openslr.org/12).
+
+## Installation guide
+
+First, clone the repo and load model weights
+
+```shell
+git clone https://github.com/Mikezz1/asr.git
+setup.sh
+```
+
+To run training use
+
+```shell
+train 
+```
+
+To run evaluation use
+
+```shell
+train 
+```
+
+Pls find training logs [here](https://wandb.ai/mikezz1/asr_project?workspace=user-mikezz1) and model weights [here](https://drive.google.com/file/d/1fA3MNHDkO-ThK2tEIng_o6VXstXtF93I/view?usp=sharing)

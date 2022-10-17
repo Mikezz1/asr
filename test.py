@@ -20,7 +20,7 @@ from torchaudio.models.decoder import ctc_decoder
 DEFAULT_CHECKPOINT_PATH = ROOT_PATH / "default_test_model" / "checkpoint.pth"
 
 
-def main(config, out_file, eval=False):
+def main(config, out_file, eval=False, beam_size=100, beam_search_type='torch'):
     logger = config.get_logger("test")
 
     # define cpu or gpu if possible
@@ -67,11 +67,11 @@ def main(config, out_file, eval=False):
             batch["probs"] = batch["log_probs"].exp().cpu()
             batch["argmax"] = batch["probs"].argmax(-1)
 
-            if args["beam_search_type"] == 'torch':
+            if beam_search_type == 'torch':
                 encoder = text_encoder.ctc_beam_search_pt
-            elif args["beam_search_type"] == 'fast':
+            elif beam_search_type == 'fast':
                 encoder = text_encoder.ctc_beam_search_fast
-            elif args["beam_search_type"] == 'custom':
+            elif beam_search_type == 'custom':
                 encoder = text_encoder.ctc_beam_search
             else:
                 raise NotImplementedError
@@ -87,7 +87,7 @@ def main(config, out_file, eval=False):
                      "pred_text_beam_search": encoder(
                          batch["probs"][i].exp().detach().cpu(),
                          batch["log_probs_length"][i],
-                         beam_size=args["beam_size"])[: 10], })
+                         beam_size=beam_size)[: 10], })
             if eval:
                 for sample in results:
                     cers_argmax.append(
@@ -235,4 +235,5 @@ if __name__ == "__main__":
     config["data"]["test"]["batch_size"] = args.batch_size
     config["data"]["test"]["n_jobs"] = args.jobs
 
-    main(config, args.output, eval=args.evaluate)
+    main(config, args.output, eval=args.evaluate,
+         beam_size=args.beam_size, beam_search_type=args.beam_search_type)

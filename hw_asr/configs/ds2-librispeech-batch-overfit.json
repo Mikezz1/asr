@@ -29,8 +29,8 @@
       {
         "type": "PitchShiftAug",
         "args": {
-          "min_transpose_semitones": -3.0,
-          "max_transpose_semitones": 3.0,
+          "min_transpose_semitones": -4.0,
+          "max_transpose_semitones": 4.0,
           "p": 0.1
         }
       }
