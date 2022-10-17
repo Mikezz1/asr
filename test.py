@@ -67,6 +67,15 @@ def main(config, out_file, eval=False):
             batch["probs"] = batch["log_probs"].exp().cpu()
             batch["argmax"] = batch["probs"].argmax(-1)
 
+            if args["beam_search_type"] == 'torch':
+                encoder = text_encoder.ctc_beam_search_pt
+            elif args["beam_search_type"] == 'fast':
+                encoder = text_encoder.ctc_beam_search_fast
+            elif args["beam_search_type"] == 'custom':
+                encoder = text_encoder.ctc_beam_search
+            else:
+                raise NotImplementedError
+
             for i in range(len(batch["text"])):
                 argmax = batch["argmax"][i]
                 argmax = argmax[: int(batch["log_probs_length"][i])]
@@ -75,29 +84,28 @@ def main(config, out_file, eval=False):
                     {"ground_trurh": batch["text"][i],
                      "pred_text_argmax": text_encoder.ctc_decode(
                          argmax.cpu().numpy()),
-                     "pred_text_beam_search": text_encoder.
-                     ctc_beam_search_pt(
+                     "pred_text_beam_search": encoder(
                          batch["probs"][i].exp().detach().cpu(),
                          batch["log_probs_length"][i],
-                         beam_size=1500)[: 10], })
-
-            for sample in results:
-                cers_argmax.append(
-                    calc_cer(
-                        sample['ground_trurh'],
-                        sample['pred_text_argmax']))
-                cers_bs.append(
-                    calc_cer(
-                        sample['ground_trurh'],
-                        sample['pred_text_beam_search'][0].text))
-                wers_argmax.append(
-                    calc_wer(
-                        sample['ground_trurh'],
-                        sample['pred_text_argmax']))
-                wers_bs.append(
-                    calc_wer(
-                        sample['ground_trurh'],
-                        sample['pred_text_beam_search'][0].text))
+                         beam_size=args["beam_size"])[: 10], })
+            if eval:
+                for sample in results:
+                    cers_argmax.append(
+                        calc_cer(
+                            sample['ground_trurh'],
+                            sample['pred_text_argmax']))
+                    cers_bs.append(
+                        calc_cer(
+                            sample['ground_trurh'],
+                            sample['pred_text_beam_search'][0].text))
+                    wers_argmax.append(
+                        calc_wer(
+                            sample['ground_trurh'],
+                            sample['pred_text_argmax']))
+                    wers_bs.append(
+                        calc_wer(
+                            sample['ground_trurh'],
+                            sample['pred_text_beam_search'][0].text))
 
         if eval:
             print('-' * 70)
@@ -168,6 +176,20 @@ if __name__ == "__main__":
         default=False,
         type=bool,
         help="Calc argmax/beamsearch metrics on test",
+    )
+
+    args.add_argument(
+        "--beam_size",
+        default=100,
+        type=int,
+        help="Beam size for beam search",
+    )
+
+    args.add_argument(
+        "--beam_search_type",
+        default='torch',
+        type=str,
+        help="'torch' for pytorch bs, 'custom' for custom bs (slow but accurate), 'fast' for ctcdecode bs",
     )
 
     args = args.parse_args()

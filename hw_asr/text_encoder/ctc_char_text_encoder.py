@@ -105,7 +105,7 @@ class CTCCharTextEncoder(CharTextEncoder):
         beam_results_unpad = sorted(
             [Hypothesis(self.ctc_decode(hypo),
                         score) for hypo,
-             score in zip(beam_results_unpad, beam_scores)],
+             score in zip(beam_results_unpad, beam_scores.tolist())],
             key=lambda x: -x.prob)
         return beam_results_unpad
 

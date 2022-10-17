@@ -10,9 +10,10 @@ class DeepSpeech(BaseModel):
             self,  gru_hidden, n_gru, conv_channels, dropout,  n_class=28, *args,
             **kwargs):
         super().__init__(n_class=n_class, *args, **kwargs)
-        self.activation = nn.Hardtanh(min_val=0, max_val=20)
 
+        self.activation = nn.Hardtanh(min_val=0, max_val=20)
         self.spec_freq = 128
+        #  dim of conv. layers output's height (freq)
         self.conv_h1 = int((self.spec_freq + 2*20 - 1*(41-1)-1)/2 + 1)
         self.conv_h2 = int((self.conv_h1 + 2*10 - 1*(21-1)-1)/2 + 1)
 
@@ -34,7 +35,7 @@ class DeepSpeech(BaseModel):
                             activation=self.activation,
                             ))
 
-        self.gru_block = make_gru_block(input_size=self.conv_h2*conv_channels,  # 8192,
+        self.gru_block = make_gru_block(input_size=self.conv_h2*conv_channels,
                                         hidden_size=gru_hidden,
                                         num_layers=n_gru,
                                         bidirectional=True,
@@ -48,8 +49,8 @@ class DeepSpeech(BaseModel):
 
         out = self.conv_block(spectrogram.unsqueeze(1))
         seq_length = out.size()[-1]
+        # flatten last two dims (conv. filters and freq) to feed tensor to RNN
         out = out.permute(0, 3, 2, 1).flatten(start_dim=2, end_dim=3)
-
         out = pack_padded_sequence(
             out, lengths=spectrogram_length, batch_first=True,
             enforce_sorted=False)
@@ -57,7 +58,6 @@ class DeepSpeech(BaseModel):
         out, _ = self.gru_block(out)
         out, _ = pad_packed_sequence(
             out, batch_first=True, total_length=seq_length)
-
         out = self.fc1(out)
 
         return {"logits": out}
