@@ -140,7 +140,8 @@ class ConfigParser:
     def get_text_encoder(self) -> BaseTextEncoder:
         if self._text_encoder is None:
             if "text_encoder" not in self._config:
-                self._text_encoder = CTCCharTextEncoder()
+                self._text_encoder = CTCCharTextEncoder(
+                    path_to_lm=self.config["decoder"]["path_to_lm"])
             else:
                 self._text_encoder = self.init_obj(
                     self["text_encoder"],

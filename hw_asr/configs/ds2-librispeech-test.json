@@ -129,5 +129,8 @@
     "wandb_project": "asr_project",
     "grad_norm_clip": 10,
     "len_epoch": 120
+  },
+  "decoder": {
+    "path_to_lm": "kenlm/3-gram.pruned.1e-7.arpa"
   }
 }

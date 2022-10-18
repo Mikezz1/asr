@@ -25,6 +25,8 @@ def main(config, out_file, eval=False, beam_size=100, beam_search_type='torch'):
     logger = config.get_logger("test")
 
     files = None
+    if beam_search_type == 'torch':
+        files = download_pretrained_files("librispeech-4-gram")
     # define cpu or gpu if possible
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -70,7 +72,6 @@ def main(config, out_file, eval=False, beam_size=100, beam_search_type='torch'):
             batch["argmax"] = batch["probs"].argmax(-1)
 
             if beam_search_type == 'torch':
-                files = download_pretrained_files("librispeech-4-gram")
                 encoder = text_encoder.ctc_beam_search_pt
             elif beam_search_type == 'fast':
                 encoder = text_encoder.ctc_beam_search_fast
