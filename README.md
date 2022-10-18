@@ -22,6 +22,8 @@ import wandb
 wandb.init()
 ```
 
+## Usage
+
 To run training use
 
 ```shell

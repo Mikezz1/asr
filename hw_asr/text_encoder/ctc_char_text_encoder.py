@@ -56,17 +56,32 @@ class CTCCharTextEncoder(CharTextEncoder):
         return sorted([Hypothesis((res+last_char).strip().replace(self.EMPTY_TOK, ''), float(proba))
                        for (res, last_char), proba in paths.items()], key=lambda x: -x.prob)
 
-    def ctc_beam_search_pt(self, probs: torch.tensor, probs_length,
-                           beam_size: int = 100) -> List[Hypothesis]:
+    def ctc_beam_search_pt(
+            self, probs: torch.tensor, probs_length, beam_size: int = 100,
+            files=None) -> List[Hypothesis]:
 
-        decoder = ctc_decoder(
-            tokens=self.vocab,
-            beam_size=beam_size,
-            lexicon=None,
-            blank_token="^",
-            sil_token=" ",
-            nbest=20,
-        )
+        if files is not None:
+            decoder = ctc_decoder(
+                tokens=self.vocab,
+                beam_size=beam_size,
+                lexicon=None,
+                blank_token="^",
+                sil_token=" ",
+                nbest=20,
+            )
+        else:
+            LM_WEIGHT = 3.23
+            WORD_SCORE = -0.26
+
+            decoder = ctc_decoder(
+                lexicon=files.lexicon,
+                tokens=self.vocab,
+                lm=files.lm,
+                nbest=20,
+                beam_size=beam_size,
+                lm_weight=LM_WEIGHT,
+                word_score=WORD_SCORE,
+            )
         res = decoder(probs.unsqueeze(0))
         return sorted([
             Hypothesis(

@@ -16,6 +16,7 @@ from string import ascii_lowercase
 from hw_asr.metric.utils import calc_cer, calc_wer
 import torchaudio
 from torchaudio.models.decoder import ctc_decoder
+from torchaudio.models.decoder import download_pretrained_files
 
 DEFAULT_CHECKPOINT_PATH = ROOT_PATH / "default_test_model" / "checkpoint.pth"
 
@@ -23,6 +24,7 @@ DEFAULT_CHECKPOINT_PATH = ROOT_PATH / "default_test_model" / "checkpoint.pth"
 def main(config, out_file, eval=False, beam_size=100, beam_search_type='torch'):
     logger = config.get_logger("test")
 
+    files = None
     # define cpu or gpu if possible
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -68,6 +70,7 @@ def main(config, out_file, eval=False, beam_size=100, beam_search_type='torch'):
             batch["argmax"] = batch["probs"].argmax(-1)
 
             if beam_search_type == 'torch':
+                files = download_pretrained_files("librispeech-4-gram")
                 encoder = text_encoder.ctc_beam_search_pt
             elif beam_search_type == 'fast':
                 encoder = text_encoder.ctc_beam_search_fast
@@ -87,7 +90,7 @@ def main(config, out_file, eval=False, beam_size=100, beam_search_type='torch'):
                      "pred_text_beam_search": encoder(
                          batch["probs"][i],
                          batch["log_probs_length"][i],
-                         beam_size=beam_size)[: 10], })
+                         beam_size=beam_size, files=files)[: 10], })
             if eval:
                 for sample in results:
                     cers_argmax.append(
