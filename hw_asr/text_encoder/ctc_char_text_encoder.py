@@ -29,8 +29,8 @@ class CTCCharTextEncoder(CharTextEncoder):
         self.path_to_lm = path_to_lm
         if self.path_to_lm is not None:
             self.model = kenlm.LanguageModel(path_to_lm)
-            self.alpha = 3
-            self.beta = -0.25
+            self.alpha = 0.01
+            self.beta = -0.001
 
     def ctc_decode(self, inds: List[int]) -> str:
         last_char = self.EMPTY_TOK
@@ -43,8 +43,8 @@ class CTCCharTextEncoder(CharTextEncoder):
         return ''.join(decoded_output)
 
     def ctc_beam_search(
-            self, probs: torch.tensor, probs_length, beam_size: int = 100 * args,
-            **kwargs) -> List[Hypothesis]:
+            self, probs: torch.tensor, probs_length, beam_size: int = 100,
+            top_k=20, *args, **kwargs) -> List[Hypothesis]:
         """
         Performs beam search and returns a list of pairs (hypothesis, hypothesis probability).
         """
@@ -61,8 +61,19 @@ class CTCCharTextEncoder(CharTextEncoder):
             paths = self._extend_and_merge(paths, proba)
             paths = self._cut_beams(paths, beam_size)
 
-        return sorted([Hypothesis((res+last_char).strip().replace(self.EMPTY_TOK, ''), float(proba))
-                       for (res, last_char), proba in paths.items()], key=lambda x: -x.prob)
+        top_hypotheses = sorted([
+            Hypothesis(
+                (res + last_char).strip().replace(
+                    self.EMPTY_TOK, ''),
+                float(proba)) for(res, last_char),
+            proba in paths.items()],
+            key=lambda x: -x.prob)[: top_k]
+
+        # rescore top_k hypotheses with LM
+        if self.path_to_lm is not None:
+            return sorted(top_hypotheses, key=lambda x: -self.model.score(x.text.upper()))
+        else:
+            return top_hypotheses
 
     def _extend_and_merge(self, paths, proba):
         new_paths = defaultdict(float)
@@ -73,12 +84,7 @@ class CTCCharTextEncoder(CharTextEncoder):
                 new_prefix = text if next_char == last_char else(
                     text + next_char)
                 new_prefix = new_prefix.replace(self.EMPTY_TOK, '')
-                if self.path_to_lm is not None:
-                    score = np.exp(self.model.score(new_prefix.upper()))
-                    new_paths[(new_prefix, next_char)] += (
-                        prob * next_char_prob + self.alpha*score + self.beta*len(new_prefix))
-                else:
-                    new_paths[(new_prefix, next_char)] += prob * next_char_prob
+                new_paths[(new_prefix, next_char)] += prob * next_char_prob
         return new_paths
 
     def _cut_beams(self, paths: dict, beam_size: int):

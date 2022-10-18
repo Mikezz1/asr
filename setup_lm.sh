@@ -16,7 +16,10 @@ sudo make install
 cd ..
 python setup.py install
 
-wget -c https://openslr.elda.org/resources/11/3-gram.pruned.1e-7.arpa.gz
-gzip -d 3-gram.pruned.1e-7.arpa.gz
+wget -c https://openslr.elda.org/resources/11/3-gram.pruned.3e-7.arpa.gz
+gzip -d 3-gram.pruned.3e-7.arpa.gz
 
+
+wget -c https://openslr.elda.org/resources/11/4-gram.arpa.gz
+gzip -d 4-gram.arpa.gz
 

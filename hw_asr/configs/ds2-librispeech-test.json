@@ -24,48 +24,6 @@
     }
   },
   "data": {
-    "train": {
-      "batch_size": 70,
-      "num_workers": 8,
-      "datasets": [
-        {
-          "type": "LibrispeechDataset",
-          "args": {
-            "part": "train-clean-100",
-            "max_audio_length": 16.7,
-            "max_text_length": 270
-          }
-        },
-        {
-          "type": "LibrispeechDataset",
-          "args": {
-            "part": "train-clean-360",
-            "max_audio_length": 16.7,
-            "max_text_length": 270
-          }
-        },
-        {
-          "type": "LibrispeechDataset",
-          "args": {
-            "part": "train-other-500",
-            "max_audio_length": 16.7,
-            "max_text_length": 270
-          }
-        }
-      ]
-    },
-    "val": {
-      "batch_size": 50,
-      "num_workers": 10,
-      "datasets": [
-        {
-          "type": "LibrispeechDataset",
-          "args": {
-            "part": "dev-clean"
-          }
-        }
-      ]
-    },
     "test_clean": {
       "batch_size": 50,
       "num_workers": 10,
